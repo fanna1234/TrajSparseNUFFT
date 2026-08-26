@@ -1,0 +1,40 @@
+__pycache__/
+*.pyc
+.DS_Store
+.venv/
+.pytest_cache/
+/data/
+/reproduced-data/
+/third_party/
+/build-cufinufft/
+
+# Local builds and profiler output.
+build/
+build-*/
+experiments/**/build/
+experiments/**/build-*/
+experiments/**/build_*/
+*.o
+*.a
+*.so
+*.sass
+*.log
+*.nsys-rep
+*.sqlite
+
+# Licensed or generated MRI inputs.
+*.h5
+*.npy
+*.bin
+experiments/**/data/
+experiments/**/packed/
+experiments/**/runtime_inputs*/
+experiments/data_prep/trajectories/manifest.json
+
+# The frozen public trajectory fixture is intentionally versioned.
+!experiments/data_prep/trajectories/spiral_standard_256.npy
+!experiments/data_prep/trajectories/spiral_standard_256.f32xy.bin
+
+# Fresh reproduction outputs.
+/results/
+/reproduced-results/

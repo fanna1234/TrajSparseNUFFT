@@ -1,0 +1,247 @@
+{
+  "binaries": {
+    "cufinufft": {
+      "path": "repo://experiments/frozen_evidence/build_cufinufft_fixed/cufinufft_native_cg",
+      "sha256": "a5026df609b369899149c7f945f90de3ed3a87b773aca22e0352b4f39c3a3bbc"
+    },
+    "dense": {
+      "path": "repo://experiments/dense_control/build/nufft_fp16x2_cg_dense_control",
+      "sha256": "dd9973a45bd249c4e90a1daec093c89d3424da4bfb851faac8c2d0057dad4941"
+    },
+    "sparse": {
+      "path": "repo://experiments/dense_control/build/nufft_fp16x2_cg_sparse_control",
+      "sha256": "b2893894cc32abc9befaf7e3c8ff6d3b2ea69658b1586dc2ae767ab7ef5f26cc"
+    }
+  },
+  "experiment_id": "frozen_evidence",
+  "initial_processes": [
+    "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+    "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+  ],
+  "iters": 20,
+  "pairs": 6,
+  "purpose": "diagnostic-only fixed-vs-legacy scale latency control",
+  "summaries": [
+    {
+      "maximum_absolute_fractional_delta": 0.0003244540731009993,
+      "median_legacy_over_fixed": 0.9998532654212002,
+      "mode": "eager",
+      "pairs": [
+        {
+          "fixed_sum_us": 4914.72015,
+          "legacy_over_fixed": 1.0002070453594392,
+          "legacy_sum_us": 4915.73772,
+          "pair": 0
+        },
+        {
+          "fixed_sum_us": 4916.4321899999995,
+          "legacy_over_fixed": 0.999928035212055,
+          "legacy_sum_us": 4916.07838,
+          "pair": 1
+        },
+        {
+          "fixed_sum_us": 4916.41273,
+          "legacy_over_fixed": 0.9997471713486512,
+          "legacy_sum_us": 4915.16972,
+          "pair": 2
+        },
+        {
+          "fixed_sum_us": 4917.4305,
+          "legacy_over_fixed": 0.9999131151929853,
+          "legacy_sum_us": 4917.00325,
+          "pair": 3
+        },
+        {
+          "fixed_sum_us": 4916.31985,
+          "legacy_over_fixed": 0.999675545926899,
+          "legacy_sum_us": 4914.72473,
+          "pair": 4
+        },
+        {
+          "fixed_sum_us": 4918.28155,
+          "legacy_over_fixed": 0.9997934156494153,
+          "legacy_sum_us": 4917.26551,
+          "pair": 5
+        }
+      ],
+      "variant": "sparse"
+    },
+    {
+      "maximum_absolute_fractional_delta": 0.0007412489565054026,
+      "median_legacy_over_fixed": 1.0001102055267856,
+      "mode": "graph",
+      "pairs": [
+        {
+          "fixed_sum_us": 4706.04964,
+          "legacy_over_fixed": 0.9998660277625121,
+          "legacy_sum_us": 4705.41916,
+          "pair": 0
+        },
+        {
+          "fixed_sum_us": 4704.09594,
+          "legacy_over_fixed": 1.0001846879849137,
+          "legacy_sum_us": 4704.96473,
+          "pair": 1
+        },
+        {
+          "fixed_sum_us": 4703.06244,
+          "legacy_over_fixed": 1.0005739387972064,
+          "legacy_sum_us": 4705.76171,
+          "pair": 2
+        },
+        {
+          "fixed_sum_us": 4703.96319,
+          "legacy_over_fixed": 1.0000357230686576,
+          "legacy_sum_us": 4704.13123,
+          "pair": 3
+        },
+        {
+          "fixed_sum_us": 4707.59516,
+          "legacy_over_fixed": 0.9992587510434946,
+          "legacy_sum_us": 4704.10566,
+          "pair": 4
+        },
+        {
+          "fixed_sum_us": 4703.99514,
+          "legacy_over_fixed": 1.0003846921491504,
+          "legacy_sum_us": 4705.80473,
+          "pair": 5
+        }
+      ],
+      "variant": "sparse"
+    },
+    {
+      "maximum_absolute_fractional_delta": 0.000603516652591507,
+      "median_legacy_over_fixed": 0.9998681493893729,
+      "mode": "eager",
+      "pairs": [
+        {
+          "fixed_sum_us": 6930.11532,
+          "legacy_over_fixed": 0.9993964833474085,
+          "legacy_sum_us": 6925.93288,
+          "pair": 0
+        },
+        {
+          "fixed_sum_us": 6928.36799,
+          "legacy_over_fixed": 0.9997238238496047,
+          "legacy_sum_us": 6926.45454,
+          "pair": 1
+        },
+        {
+          "fixed_sum_us": 6925.55046,
+          "legacy_over_fixed": 1.0000639775859779,
+          "legacy_sum_us": 6925.9935399999995,
+          "pair": 2
+        },
+        {
+          "fixed_sum_us": 6926.780699999999,
+          "legacy_over_fixed": 1.0003698067126625,
+          "legacy_sum_us": 6929.34227,
+          "pair": 3
+        },
+        {
+          "fixed_sum_us": 6927.9134699999995,
+          "legacy_over_fixed": 0.9999173517390944,
+          "legacy_sum_us": 6927.3408899999995,
+          "pair": 4
+        },
+        {
+          "fixed_sum_us": 6927.64149,
+          "legacy_over_fixed": 0.9998189470396512,
+          "legacy_sum_us": 6926.3872200000005,
+          "pair": 5
+        }
+      ],
+      "variant": "dense"
+    },
+    {
+      "maximum_absolute_fractional_delta": 0.0004844529187166824,
+      "median_legacy_over_fixed": 0.9999699376711729,
+      "mode": "graph",
+      "pairs": [
+        {
+          "fixed_sum_us": 6654.27989,
+          "legacy_over_fixed": 0.9999033494216307,
+          "legacy_sum_us": 6653.636750000001,
+          "pair": 0
+        },
+        {
+          "fixed_sum_us": 6653.85761,
+          "legacy_over_fixed": 0.9997758668598861,
+          "legacy_sum_us": 6652.36626,
+          "pair": 1
+        },
+        {
+          "fixed_sum_us": 6652.8097099999995,
+          "legacy_over_fixed": 1.0000365259207151,
+          "legacy_sum_us": 6653.05271,
+          "pair": 2
+        },
+        {
+          "fixed_sum_us": 6651.3584200000005,
+          "legacy_over_fixed": 1.0004844529187167,
+          "legacy_sum_us": 6654.580690000001,
+          "pair": 3
+        },
+        {
+          "fixed_sum_us": 6657.70397,
+          "legacy_over_fixed": 0.9996332970028405,
+          "legacy_sum_us": 6655.26257,
+          "pair": 4
+        },
+        {
+          "fixed_sum_us": 6651.8337200000005,
+          "legacy_over_fixed": 1.0002176948584336,
+          "legacy_sum_us": 6653.281789999999,
+          "pair": 5
+        }
+      ],
+      "variant": "dense"
+    },
+    {
+      "maximum_absolute_fractional_delta": 0.08484647301503134,
+      "median_legacy_over_fixed": 1.020706994844139,
+      "mode": "eager",
+      "pairs": [
+        {
+          "fixed_sum_us": 12235.6739,
+          "legacy_over_fixed": 1.0327805835034554,
+          "legacy_sum_us": 12636.76643,
+          "pair": 0
+        },
+        {
+          "fixed_sum_us": 12922.590250000001,
+          "legacy_over_fixed": 0.9343711637069045,
+          "legacy_sum_us": 12074.49569,
+          "pair": 1
+        },
+        {
+          "fixed_sum_us": 12549.123,
+          "legacy_over_fixed": 0.9845034350209175,
+          "legacy_sum_us": 12354.654700000001,
+          "pair": 2
+        },
+        {
+          "fixed_sum_us": 12245.81757,
+          "legacy_over_fixed": 1.0848464730150313,
+          "legacy_sum_us": 13284.832,
+          "pair": 3
+        },
+        {
+          "fixed_sum_us": 12167.04482,
+          "legacy_over_fixed": 1.0086334061848226,
+          "legacy_sum_us": 12272.08786,
+          "pair": 4
+        },
+        {
+          "fixed_sum_us": 12456.6063,
+          "legacy_over_fixed": 1.0385442052543639,
+          "legacy_sum_us": 12936.73629,
+          "pair": 5
+        }
+      ],
+      "variant": "cufinufft"
+    }
+  ],
+  "warmup": 5
+}

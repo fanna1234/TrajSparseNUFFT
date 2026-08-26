@@ -1,0 +1,62 @@
+{
+  "dense": {
+    "inst_executed": {
+      "unit": "inst",
+      "value": "6077764"
+    },
+    "sass__inst_executed_register_spilling": {
+      "unit": "inst",
+      "value": "0"
+    },
+    "smsp__inst_executed.sum": {
+      "unit": "inst",
+      "value": "6077764.000000"
+    },
+    "smsp__inst_executed_op_branch.sum": {
+      "unit": "inst",
+      "value": "246934.000000"
+    },
+    "smsp__sass_average_branch_targets_threads_uniform.pct": {
+      "unit": "%",
+      "value": "100.000000"
+    },
+    "thread_inst_executed": {
+      "unit": "inst",
+      "value": "194488280"
+    },
+    "thread_inst_executed_true": {
+      "unit": "inst",
+      "value": "190957820"
+    }
+  },
+  "sparse": {
+    "inst_executed": {
+      "unit": "inst",
+      "value": "6081487"
+    },
+    "sass__inst_executed_register_spilling": {
+      "unit": "inst",
+      "value": "0"
+    },
+    "smsp__inst_executed.sum": {
+      "unit": "inst",
+      "value": "6081487.000000"
+    },
+    "smsp__inst_executed_op_branch.sum": {
+      "unit": "inst",
+      "value": "246934.000000"
+    },
+    "smsp__sass_average_branch_targets_threads_uniform.pct": {
+      "unit": "%",
+      "value": "100.000000"
+    },
+    "thread_inst_executed": {
+      "unit": "inst",
+      "value": "194607416"
+    },
+    "thread_inst_executed_true": {
+      "unit": "inst",
+      "value": "191076956"
+    }
+  }
+}

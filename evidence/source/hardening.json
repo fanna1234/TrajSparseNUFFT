@@ -1,0 +1,47 @@
+{
+  "all_memcheck_pass": true,
+  "all_stress_pass": true,
+  "cufinufft_runtime_contains_truth": false,
+  "experiment_id": "frozen_evidence",
+  "memcheck": [
+    {
+      "sha256": "b700b15fa5d5921b85b32062ec04592383f8db27848785fe8469d5b34a9d5c2a",
+      "zero_errors": true
+    },
+    {
+      "sha256": "d2c037fed51fedce915c37fcb9f197f929ee6dd6253992b71d6c4290d1ad2cea",
+      "zero_errors": true
+    },
+    {
+      "sha256": "0686695299447061d16ca66b19340bdeb0b1f12e9c458a7c083be37777393cab",
+      "zero_errors": true
+    }
+  ],
+  "scale_rule": {
+    "native_scale": 1.0,
+    "raw_scale": 512.0,
+    "truth_free": true
+  },
+  "stress": [
+    {
+      "correct": true,
+      "sha256": "e0a8edc33989bfb894a657fe9843d8b3e289e7f0af17ab9a6cfbe0af6ba08f6c"
+    },
+    {
+      "correct": true,
+      "sha256": "ba015c3d857af13b8f19191a82444c67d56745bd49ca2c6d068eaf7ce6fe5867"
+    },
+    {
+      "correct": true,
+      "sha256": "dc9b6ee4fddc8fd50d8e12f0069a127b7a4d7b121884f84456ea00a7bcb79294"
+    },
+    {
+      "correct": true,
+      "sha256": "d754c7c98bd19f4417288188ca97377e1e4c2f4bb7f9d730a9087042f9e52e64"
+    },
+    {
+      "correct": true,
+      "sha256": "32ee9a10a091bff1f84f8b668084c7f2bb3acd5fcd063c80fb01bd3c3c3fe202"
+    }
+  ]
+}

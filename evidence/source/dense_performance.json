@@ -1,0 +1,1041 @@
+{
+  "environment": {
+    "dense_binary": "repo://experiments/dense_control/build/nufft_fp16x2_cg_dense_control",
+    "dense_binary_sha256": "dd9973a45bd249c4e90a1daec093c89d3424da4bfb851faac8c2d0057dad4941",
+    "dense_root": "repo://experiments/dense_control/dense_control",
+    "ended_ns": 1787710846870519212,
+    "experiment_id": "dense_control",
+    "iters": 20,
+    "nvidia_smi": "2026/08/26 03:20:24.303, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2850 MHz, 13365 MHz, 40, 163.62 W, 600.00 W, 1203 MiB, 97887 MiB",
+    "packed_root": "repo://reproduced-data/packed",
+    "pairs": 6,
+    "post_run_compute_processes": [
+      "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+      "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+    ],
+    "pre_run_compute_processes": [
+      "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+      "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+    ],
+    "process_audits": [
+      {
+        "case": "spiral",
+        "gpu_state": "2026/08/26 03:20:24.343, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2850 MHz, 13365 MHz, 40, 158.20 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "eager",
+        "pair": 0,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "sparse"
+      },
+      {
+        "case": "spiral",
+        "gpu_state": "2026/08/26 03:20:24.632, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2850 MHz, 13365 MHz, 42, 163.15 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "eager",
+        "pair": 0,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "dense"
+      },
+      {
+        "case": "radial",
+        "gpu_state": "2026/08/26 03:20:24.951, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2850 MHz, 13365 MHz, 43, 170.44 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "eager",
+        "pair": 0,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "dense"
+      },
+      {
+        "case": "radial",
+        "gpu_state": "2026/08/26 03:20:25.270, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2835 MHz, 13365 MHz, 44, 181.41 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "eager",
+        "pair": 0,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "sparse"
+      },
+      {
+        "case": "golden",
+        "gpu_state": "2026/08/26 03:20:25.566, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2662 MHz, 13365 MHz, 43, 195.73 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "eager",
+        "pair": 0,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "sparse"
+      },
+      {
+        "case": "golden",
+        "gpu_state": "2026/08/26 03:20:25.861, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2632 MHz, 13365 MHz, 43, 191.26 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "eager",
+        "pair": 0,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "dense"
+      },
+      {
+        "case": "spiral",
+        "gpu_state": "2026/08/26 03:20:26.188, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2655 MHz, 13365 MHz, 46, 181.01 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "eager",
+        "pair": 1,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "dense"
+      },
+      {
+        "case": "spiral",
+        "gpu_state": "2026/08/26 03:20:26.513, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2677 MHz, 13365 MHz, 41, 178.34 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "eager",
+        "pair": 1,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "sparse"
+      },
+      {
+        "case": "radial",
+        "gpu_state": "2026/08/26 03:20:26.811, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2662 MHz, 13365 MHz, 41, 166.17 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "eager",
+        "pair": 1,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "sparse"
+      },
+      {
+        "case": "radial",
+        "gpu_state": "2026/08/26 03:20:27.106, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2625 MHz, 13365 MHz, 41, 162.63 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "eager",
+        "pair": 1,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "dense"
+      },
+      {
+        "case": "golden",
+        "gpu_state": "2026/08/26 03:20:27.431, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2655 MHz, 13365 MHz, 42, 168.75 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "eager",
+        "pair": 1,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "dense"
+      },
+      {
+        "case": "golden",
+        "gpu_state": "2026/08/26 03:20:27.755, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2685 MHz, 13365 MHz, 43, 173.24 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "eager",
+        "pair": 1,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "sparse"
+      },
+      {
+        "case": "spiral",
+        "gpu_state": "2026/08/26 03:20:28.052, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2662 MHz, 13365 MHz, 43, 178.57 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "eager",
+        "pair": 2,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "sparse"
+      },
+      {
+        "case": "spiral",
+        "gpu_state": "2026/08/26 03:20:28.349, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2632 MHz, 13365 MHz, 43, 177.03 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "eager",
+        "pair": 2,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "dense"
+      },
+      {
+        "case": "radial",
+        "gpu_state": "2026/08/26 03:20:28.674, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2655 MHz, 13365 MHz, 44, 186.08 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "eager",
+        "pair": 2,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "dense"
+      },
+      {
+        "case": "radial",
+        "gpu_state": "2026/08/26 03:20:28.999, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2677 MHz, 13365 MHz, 46, 186.22 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "eager",
+        "pair": 2,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "sparse"
+      },
+      {
+        "case": "golden",
+        "gpu_state": "2026/08/26 03:20:29.294, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2662 MHz, 13365 MHz, 46, 186.39 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "eager",
+        "pair": 2,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "sparse"
+      },
+      {
+        "case": "golden",
+        "gpu_state": "2026/08/26 03:20:29.592, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2640 MHz, 13365 MHz, 47, 178.30 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "eager",
+        "pair": 2,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "dense"
+      },
+      {
+        "case": "spiral",
+        "gpu_state": "2026/08/26 03:20:29.915, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2647 MHz, 13365 MHz, 42, 178.19 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "eager",
+        "pair": 3,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "dense"
+      },
+      {
+        "case": "spiral",
+        "gpu_state": "2026/08/26 03:20:30.239, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2677 MHz, 13365 MHz, 43, 178.96 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "eager",
+        "pair": 3,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "sparse"
+      },
+      {
+        "case": "radial",
+        "gpu_state": "2026/08/26 03:20:30.536, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2662 MHz, 13365 MHz, 42, 179.36 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "eager",
+        "pair": 3,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "sparse"
+      },
+      {
+        "case": "radial",
+        "gpu_state": "2026/08/26 03:20:30.830, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2647 MHz, 13365 MHz, 42, 178.87 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "eager",
+        "pair": 3,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "dense"
+      },
+      {
+        "case": "golden",
+        "gpu_state": "2026/08/26 03:20:31.153, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2640 MHz, 13365 MHz, 43, 180.05 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "eager",
+        "pair": 3,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "dense"
+      },
+      {
+        "case": "golden",
+        "gpu_state": "2026/08/26 03:20:31.473, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2670 MHz, 13365 MHz, 45, 185.48 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "eager",
+        "pair": 3,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "sparse"
+      },
+      {
+        "case": "spiral",
+        "gpu_state": "2026/08/26 03:20:31.769, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2662 MHz, 13365 MHz, 44, 183.35 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "eager",
+        "pair": 4,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "sparse"
+      },
+      {
+        "case": "spiral",
+        "gpu_state": "2026/08/26 03:20:32.065, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2662 MHz, 13365 MHz, 44, 179.44 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "eager",
+        "pair": 4,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "dense"
+      },
+      {
+        "case": "radial",
+        "gpu_state": "2026/08/26 03:20:32.387, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2625 MHz, 13365 MHz, 47, 179.69 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "eager",
+        "pair": 4,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "dense"
+      },
+      {
+        "case": "radial",
+        "gpu_state": "2026/08/26 03:20:32.710, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2670 MHz, 13365 MHz, 42, 167.16 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "eager",
+        "pair": 4,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "sparse"
+      },
+      {
+        "case": "golden",
+        "gpu_state": "2026/08/26 03:20:33.007, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2662 MHz, 13365 MHz, 42, 166.68 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "eager",
+        "pair": 4,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "sparse"
+      },
+      {
+        "case": "golden",
+        "gpu_state": "2026/08/26 03:20:33.302, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2662 MHz, 13365 MHz, 46, 183.53 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "eager",
+        "pair": 4,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "dense"
+      },
+      {
+        "case": "spiral",
+        "gpu_state": "2026/08/26 03:20:33.631, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2625 MHz, 13365 MHz, 42, 168.90 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "eager",
+        "pair": 5,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "dense"
+      },
+      {
+        "case": "spiral",
+        "gpu_state": "2026/08/26 03:20:33.955, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2670 MHz, 13365 MHz, 43, 172.39 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "eager",
+        "pair": 5,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "sparse"
+      },
+      {
+        "case": "radial",
+        "gpu_state": "2026/08/26 03:20:34.251, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2662 MHz, 13365 MHz, 43, 179.94 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "eager",
+        "pair": 5,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "sparse"
+      },
+      {
+        "case": "radial",
+        "gpu_state": "2026/08/26 03:20:34.547, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2662 MHz, 13365 MHz, 43, 179.42 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "eager",
+        "pair": 5,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "dense"
+      },
+      {
+        "case": "golden",
+        "gpu_state": "2026/08/26 03:20:34.868, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2632 MHz, 13365 MHz, 44, 179.48 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "eager",
+        "pair": 5,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "dense"
+      },
+      {
+        "case": "golden",
+        "gpu_state": "2026/08/26 03:20:35.191, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2662 MHz, 13365 MHz, 47, 187.19 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "eager",
+        "pair": 5,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "sparse"
+      },
+      {
+        "case": "spiral",
+        "gpu_state": "2026/08/26 03:20:35.451, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2685 MHz, 13365 MHz, 44, 188.14 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "graph",
+        "pair": 0,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "sparse"
+      },
+      {
+        "case": "spiral",
+        "gpu_state": "2026/08/26 03:20:35.747, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2662 MHz, 13365 MHz, 43, 188.43 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "graph",
+        "pair": 0,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "dense"
+      },
+      {
+        "case": "radial",
+        "gpu_state": "2026/08/26 03:20:36.066, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2677 MHz, 13365 MHz, 44, 187.73 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "graph",
+        "pair": 0,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "dense"
+      },
+      {
+        "case": "radial",
+        "gpu_state": "2026/08/26 03:20:36.387, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2632 MHz, 13365 MHz, 47, 186.94 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "graph",
+        "pair": 0,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "sparse"
+      },
+      {
+        "case": "golden",
+        "gpu_state": "2026/08/26 03:20:36.680, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2670 MHz, 13365 MHz, 46, 186.56 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "graph",
+        "pair": 0,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "sparse"
+      },
+      {
+        "case": "golden",
+        "gpu_state": "2026/08/26 03:20:36.967, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2662 MHz, 13365 MHz, 45, 186.18 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "graph",
+        "pair": 0,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "dense"
+      },
+      {
+        "case": "spiral",
+        "gpu_state": "2026/08/26 03:20:37.290, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2677 MHz, 13365 MHz, 47, 185.49 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "graph",
+        "pair": 1,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "dense"
+      },
+      {
+        "case": "spiral",
+        "gpu_state": "2026/08/26 03:20:37.614, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2632 MHz, 13365 MHz, 42, 177.84 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "graph",
+        "pair": 1,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "sparse"
+      },
+      {
+        "case": "radial",
+        "gpu_state": "2026/08/26 03:20:37.907, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2655 MHz, 13365 MHz, 42, 178.22 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "graph",
+        "pair": 1,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "sparse"
+      },
+      {
+        "case": "radial",
+        "gpu_state": "2026/08/26 03:20:38.203, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2662 MHz, 13365 MHz, 47, 183.23 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "graph",
+        "pair": 1,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "dense"
+      },
+      {
+        "case": "golden",
+        "gpu_state": "2026/08/26 03:20:38.527, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2677 MHz, 13365 MHz, 43, 168.78 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "graph",
+        "pair": 1,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "dense"
+      },
+      {
+        "case": "golden",
+        "gpu_state": "2026/08/26 03:20:38.851, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2647 MHz, 13365 MHz, 44, 171.09 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "graph",
+        "pair": 1,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "sparse"
+      },
+      {
+        "case": "spiral",
+        "gpu_state": "2026/08/26 03:20:39.145, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2647 MHz, 13365 MHz, 44, 177.70 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "graph",
+        "pair": 2,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "sparse"
+      },
+      {
+        "case": "spiral",
+        "gpu_state": "2026/08/26 03:20:39.440, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2662 MHz, 13365 MHz, 44, 177.71 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "graph",
+        "pair": 2,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "dense"
+      },
+      {
+        "case": "radial",
+        "gpu_state": "2026/08/26 03:20:39.767, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2677 MHz, 13365 MHz, 44, 184.51 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "graph",
+        "pair": 2,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "dense"
+      },
+      {
+        "case": "radial",
+        "gpu_state": "2026/08/26 03:20:40.095, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2655 MHz, 13365 MHz, 47, 185.57 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "graph",
+        "pair": 2,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "sparse"
+      },
+      {
+        "case": "golden",
+        "gpu_state": "2026/08/26 03:20:40.392, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2640 MHz, 13365 MHz, 48, 185.40 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "graph",
+        "pair": 2,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "sparse"
+      },
+      {
+        "case": "golden",
+        "gpu_state": "2026/08/26 03:20:40.687, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2662 MHz, 13365 MHz, 48, 185.66 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "graph",
+        "pair": 2,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "dense"
+      },
+      {
+        "case": "spiral",
+        "gpu_state": "2026/08/26 03:20:41.008, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2677 MHz, 13365 MHz, 43, 177.34 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "graph",
+        "pair": 3,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "dense"
+      },
+      {
+        "case": "spiral",
+        "gpu_state": "2026/08/26 03:20:41.328, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2662 MHz, 13365 MHz, 43, 166.03 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "graph",
+        "pair": 3,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "sparse"
+      },
+      {
+        "case": "radial",
+        "gpu_state": "2026/08/26 03:20:41.623, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2640 MHz, 13365 MHz, 43, 178.06 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "graph",
+        "pair": 3,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "sparse"
+      },
+      {
+        "case": "radial",
+        "gpu_state": "2026/08/26 03:20:41.917, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2655 MHz, 13365 MHz, 43, 177.52 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "graph",
+        "pair": 3,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "dense"
+      },
+      {
+        "case": "golden",
+        "gpu_state": "2026/08/26 03:20:42.245, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2677 MHz, 13365 MHz, 44, 177.63 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "graph",
+        "pair": 3,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "dense"
+      },
+      {
+        "case": "golden",
+        "gpu_state": "2026/08/26 03:20:42.575, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2677 MHz, 13365 MHz, 45, 178.76 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "graph",
+        "pair": 3,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "sparse"
+      },
+      {
+        "case": "spiral",
+        "gpu_state": "2026/08/26 03:20:42.844, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2640 MHz, 13365 MHz, 44, 178.45 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "graph",
+        "pair": 4,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "sparse"
+      },
+      {
+        "case": "spiral",
+        "gpu_state": "2026/08/26 03:20:43.139, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2647 MHz, 13365 MHz, 44, 181.34 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "graph",
+        "pair": 4,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "dense"
+      },
+      {
+        "case": "radial",
+        "gpu_state": "2026/08/26 03:20:43.464, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2662 MHz, 13365 MHz, 44, 179.16 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "graph",
+        "pair": 4,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "dense"
+      },
+      {
+        "case": "radial",
+        "gpu_state": "2026/08/26 03:20:43.794, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2677 MHz, 13365 MHz, 48, 186.43 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "graph",
+        "pair": 4,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "sparse"
+      },
+      {
+        "case": "golden",
+        "gpu_state": "2026/08/26 03:20:44.062, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2662 MHz, 13365 MHz, 45, 187.14 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "graph",
+        "pair": 4,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "sparse"
+      },
+      {
+        "case": "golden",
+        "gpu_state": "2026/08/26 03:20:44.355, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2625 MHz, 13365 MHz, 44, 187.08 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "graph",
+        "pair": 4,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "dense"
+      },
+      {
+        "case": "spiral",
+        "gpu_state": "2026/08/26 03:20:44.680, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2655 MHz, 13365 MHz, 46, 186.52 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "graph",
+        "pair": 5,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "dense"
+      },
+      {
+        "case": "spiral",
+        "gpu_state": "2026/08/26 03:20:45.003, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2677 MHz, 13365 MHz, 47, 184.12 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "graph",
+        "pair": 5,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "sparse"
+      },
+      {
+        "case": "radial",
+        "gpu_state": "2026/08/26 03:20:45.295, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2662 MHz, 13365 MHz, 48, 186.33 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "graph",
+        "pair": 5,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "sparse"
+      },
+      {
+        "case": "radial",
+        "gpu_state": "2026/08/26 03:20:45.560, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2662 MHz, 13365 MHz, 45, 187.33 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "graph",
+        "pair": 5,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "dense"
+      },
+      {
+        "case": "golden",
+        "gpu_state": "2026/08/26 03:20:45.887, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2625 MHz, 13365 MHz, 48, 179.19 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "graph",
+        "pair": 5,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "dense"
+      },
+      {
+        "case": "golden",
+        "gpu_state": "2026/08/26 03:20:46.206, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2670 MHz, 13365 MHz, 43, 179.07 W, 600.00 W, 1203 MiB, 97887 MiB",
+        "mode": "graph",
+        "pair": 5,
+        "processes": [
+          "85270, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB",
+          "85269, /usr/libexec/gnome-remote-desktop-daemon, 558 MiB"
+        ],
+        "variant": "sparse"
+      }
+    ],
+    "repository_state": "workspace-not-git",
+    "runtime_root": "repo://experiments/production/runtime_inputs_ocmr3",
+    "scale_rule": {
+      "kind": "fixed_truth_free",
+      "native_scale": 1.0,
+      "raw_scale": 512.0
+    },
+    "source_sha256": {
+      "repo://experiments/production/src/nufft_dense_control.cuh": "56f499684b0ae264e2ee607cc1bd95cc625f9545222c460f95dffedca7cf1457",
+      "repo://experiments/production/src/nufft_fp16x2_cg_bench.cu": "56567755472d8871e68fce5e1c928dd056481fa24365a51ea40d7da1511751a9",
+      "repo://experiments/production/src/nufft_integrated_bench.cu": "59549fe3f007d4aaff871292d6bc35a248bda4e8956d7c9819de62317a4e7c8a",
+      "repo://experiments/production/src/nufft_spmma_bench.cu": "17dfafb6820605c53985d0ad01b90764c46be41b7920ce89ac18e1b5d80cc027"
+    },
+    "sparse_binary": "repo://experiments/dense_control/build/nufft_fp16x2_cg_sparse_control",
+    "sparse_binary_sha256": "b2893894cc32abc9befaf7e3c8ff6d3b2ea69658b1586dc2ae767ab7ef5f26cc",
+    "started_ns": 1787710824284781984,
+    "warmup": 5
+  },
+  "experiment_id": "dense_control",
+  "summaries": [
+    {
+      "aggregate": {
+        "paired_ci95_high": 1.4086164184770962,
+        "paired_ci95_low": 1.4077432604035658,
+        "paired_geomean_speedup": 1.4082191001195759,
+        "rows": [
+          {
+            "dense_sum_us": 6929.13933,
+            "pair": 0,
+            "sparse_speedup": 1.4089595753632107,
+            "sparse_sum_us": 4917.91209
+          },
+          {
+            "dense_sum_us": 6925.57927,
+            "pair": 1,
+            "sparse_speedup": 1.4071639860291296,
+            "sparse_sum_us": 4921.65756
+          },
+          {
+            "dense_sum_us": 6929.497530000001,
+            "pair": 2,
+            "sparse_speedup": 1.408223321135149,
+            "sparse_sum_us": 4920.73766
+          },
+          {
+            "dense_sum_us": 6929.85287,
+            "pair": 3,
+            "sparse_speedup": 1.408579995765308,
+            "sparse_sum_us": 4919.74392
+          },
+          {
+            "dense_sum_us": 6929.27837,
+            "pair": 4,
+            "sparse_speedup": 1.4083733985647637,
+            "sparse_sum_us": 4920.05769
+          },
+          {
+            "dense_sum_us": 6929.4096,
+            "pair": 5,
+            "sparse_speedup": 1.4080149834336582,
+            "sparse_sum_us": 4921.40331
+          }
+        ],
+        "wins": 6
+      },
+      "case_summaries": [
+        {
+          "case": "spiral",
+          "dense": {
+            "median_us": 2276.824,
+            "p10_us": 2275.91677,
+            "p90_us": 2277.896025
+          },
+          "marginal_ratio": 1.3831014497196075,
+          "paired_ci95_high": 1.383944448521475,
+          "paired_ci95_low": 1.382305813747241,
+          "paired_geomean_speedup": 1.3831455767983172,
+          "sparse": {
+            "median_us": 1646.17281,
+            "p10_us": 1645.4360000000001,
+            "p90_us": 1646.871185
+          },
+          "wins": 6
+        },
+        {
+          "case": "radial",
+          "dense": {
+            "median_us": 2325.944805,
+            "p10_us": 2325.496005,
+            "p90_us": 2326.23682
+          },
+          "marginal_ratio": 1.4251944800148144,
+          "paired_ci95_high": 1.4255814352430765,
+          "paired_ci95_low": 1.4248304444782691,
+          "paired_geomean_speedup": 1.425209307391037,
+          "sparse": {
+            "median_us": 1632.019235,
+            "p10_us": 1631.43282,
+            "p90_us": 1632.44486
+          },
+          "wins": 6
+        },
+        {
+          "case": "golden",
+          "dense": {
+            "median_us": 2325.89445,
+            "p10_us": 2325.2096199999996,
+            "p90_us": 2326.9599900000003
+          },
+          "marginal_ratio": 1.4162794406198613,
+          "paired_ci95_high": 1.4168056605034516,
+          "paired_ci95_low": 1.416069110575698,
+          "paired_geomean_speedup": 1.4164691109176326,
+          "sparse": {
+            "median_us": 1642.256735,
+            "p10_us": 1641.51287,
+            "p90_us": 1642.6096
+          },
+          "wins": 6
+        }
+      ],
+      "mode": "eager"
+    },
+    {
+      "aggregate": {
+        "paired_ci95_high": 1.4139917564297222,
+        "paired_ci95_low": 1.4135029798543173,
+        "paired_geomean_speedup": 1.4137558002480994,
+        "rows": [
+          {
+            "dense_sum_us": 6654.37107,
+            "pair": 0,
+            "sparse_speedup": 1.4138492996627545,
+            "sparse_sum_us": 4706.56319
+          },
+          {
+            "dense_sum_us": 6652.32639,
+            "pair": 1,
+            "sparse_speedup": 1.4132495832414194,
+            "sparse_sum_us": 4707.11364
+          },
+          {
+            "dense_sum_us": 6657.51038,
+            "pair": 2,
+            "sparse_speedup": 1.4141668063554704,
+            "sparse_sum_us": 4707.72638
+          },
+          {
+            "dense_sum_us": 6656.37131,
+            "pair": 3,
+            "sparse_speedup": 1.4138167281721934,
+            "sparse_sum_us": 4708.0864
+          },
+          {
+            "dense_sum_us": 6656.4752499999995,
+            "pair": 4,
+            "sparse_speedup": 1.413989205362557,
+            "sparse_sum_us": 4707.58562
+          },
+          {
+            "dense_sum_us": 6654.87042,
+            "pair": 5,
+            "sparse_speedup": 1.4134633829924228,
+            "sparse_sum_us": 4708.2015
+          }
+        ],
+        "wins": 6
+      },
+      "case_summaries": [
+        {
+          "case": "spiral",
+          "dense": {
+            "median_us": 2185.0735649999997,
+            "p10_us": 2184.0255749999997,
+            "p90_us": 2186.67679
+          },
+          "marginal_ratio": 1.385673161551539,
+          "paired_ci95_high": 1.3865137082419914,
+          "paired_ci95_low": 1.3852465077520486,
+          "paired_geomean_speedup": 1.3858757136807565,
+          "sparse": {
+            "median_us": 1576.90401,
+            "p10_us": 1576.2648100000001,
+            "p90_us": 1577.252005
+          },
+          "wins": 6
+        },
+        {
+          "case": "radial",
+          "dense": {
+            "median_us": 2234.69763,
+            "p10_us": 2233.630465,
+            "p90_us": 2235.01358
+          },
+          "marginal_ratio": 1.431368814222091,
+          "paired_ci95_high": 1.431841185177028,
+          "paired_ci95_low": 1.4308425107828573,
+          "paired_geomean_speedup": 1.4313030623242986,
+          "sparse": {
+            "median_us": 1561.231185,
+            "p10_us": 1560.55999,
+            "p90_us": 1561.59277
+          },
+          "wins": 6
+        },
+        {
+          "case": "golden",
+          "dense": {
+            "median_us": 2235.511205,
+            "p10_us": 2234.126375,
+            "p90_us": 2237.207225
+          },
+          "marginal_ratio": 1.4242510220447053,
+          "paired_ci95_high": 1.4248165699534003,
+          "paired_ci95_low": 1.4238719626459326,
+          "paired_geomean_speedup": 1.4243110658775293,
+          "sparse": {
+            "median_us": 1569.604775,
+            "p10_us": 1569.13042,
+            "p90_us": 1570.0983999999999
+          },
+          "wins": 6
+        }
+      ],
+      "mode": "graph"
+    }
+  ]
+}

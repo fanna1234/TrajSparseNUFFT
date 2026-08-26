@@ -1,0 +1,212 @@
+{
+  "dense": {
+    "duration_us": 50.976,
+    "memory": {
+      "l1tex_hit_rate_pct": 48.34,
+      "l2_hit_rate_pct": 39.29,
+      "max_bandwidth_pct": 49.49,
+      "mem_busy_pct": 27.21,
+      "mem_pipes_busy_pct": 14.83,
+      "memory_throughput_gbytes_s": 845.46
+    },
+    "source": {
+      "inst_executed": {
+        "unit": "inst",
+        "value": "6077764"
+      },
+      "sass__inst_executed_register_spilling": {
+        "unit": "inst",
+        "value": "0"
+      },
+      "smsp__inst_executed.sum": {
+        "unit": "inst",
+        "value": "6077764.000000"
+      },
+      "smsp__inst_executed_op_branch.sum": {
+        "unit": "inst",
+        "value": "246934.000000"
+      },
+      "smsp__sass_average_branch_targets_threads_uniform.pct": {
+        "unit": "%",
+        "value": "100.000000"
+      },
+      "thread_inst_executed": {
+        "unit": "inst",
+        "value": "194488280"
+      },
+      "thread_inst_executed_true": {
+        "unit": "inst",
+        "value": "190957820"
+      }
+    }
+  },
+  "experiment_id": "dense_control",
+  "formal_full_cg": {
+    "eager": {
+      "paired_ci95_high": 1.4564909206858347,
+      "paired_ci95_low": 1.4557279283915627,
+      "paired_geomean_speedup": 1.4561191550824337,
+      "rows": [
+        {
+          "dense_sum_us": 7000.31681,
+          "pair": 0,
+          "sparse_speedup": 1.4565829946296511,
+          "sparse_sum_us": 4805.98554
+        },
+        {
+          "dense_sum_us": 6997.49431,
+          "pair": 1,
+          "sparse_speedup": 1.45576209287627,
+          "sparse_sum_us": 4806.75678
+        },
+        {
+          "dense_sum_us": 7000.7824,
+          "pair": 2,
+          "sparse_speedup": 1.4564325683839332,
+          "sparse_sum_us": 4806.801600000001
+        },
+        {
+          "dense_sum_us": 7001.011270000001,
+          "pair": 3,
+          "sparse_speedup": 1.4558192063022044,
+          "sparse_sum_us": 4808.984
+        },
+        {
+          "dense_sum_us": 7003.19996,
+          "pair": 4,
+          "sparse_speedup": 1.4567173368436273,
+          "sparse_sum_us": 4807.52153
+        },
+        {
+          "dense_sum_us": 7000.188829999999,
+          "pair": 5,
+          "sparse_speedup": 1.4554012136117798,
+          "sparse_sum_us": 4809.80005
+        }
+      ],
+      "wins": 6
+    },
+    "graph": {
+      "paired_ci95_high": 1.4617666321185427,
+      "paired_ci95_low": 1.4613376038209065,
+      "paired_geomean_speedup": 1.4615626377179327,
+      "rows": [
+        {
+          "dense_sum_us": 6731.03829,
+          "pair": 0,
+          "sparse_speedup": 1.4610635972816062,
+          "sparse_sum_us": 4606.94408
+        },
+        {
+          "dense_sum_us": 6731.19355,
+          "pair": 1,
+          "sparse_speedup": 1.4617765744420173,
+          "sparse_sum_us": 4604.80327
+        },
+        {
+          "dense_sum_us": 6733.75683,
+          "pair": 2,
+          "sparse_speedup": 1.4619355327715267,
+          "sparse_sum_us": 4606.05593
+        },
+        {
+          "dense_sum_us": 6732.76005,
+          "pair": 3,
+          "sparse_speedup": 1.4615292123766739,
+          "sparse_sum_us": 4606.65445
+        },
+        {
+          "dense_sum_us": 6732.94887,
+          "pair": 4,
+          "sparse_speedup": 1.461487482823593,
+          "sparse_sum_us": 4606.91518
+        },
+        {
+          "dense_sum_us": 6733.4640500000005,
+          "pair": 5,
+          "sparse_speedup": 1.4615835775101882,
+          "sparse_sum_us": 4606.96477
+        }
+      ],
+      "wins": 6
+    }
+  },
+  "interpretation": "Matched kernels keep launch/resources/control structure; dense doubles MMA work and full-A traffic. Total executed instructions and branch counts remain nearly equal, so the measured gap is not a launch/control artifact.",
+  "ncu_dense_over_sparse": 1.6490683229813665,
+  "profile_scope": "first adjoint high-panel complex interpolation kernel; same G_T shape; NCU replay diagnostic",
+  "raw_sha256": {
+    "build/sass_ledger.json": "e56bce78037ffd83e3a197e4d72bcc15d2b8157e9f5ec24ae9313630f269bdaf",
+    "profiles/dense_first_adjoint_clean_v1.csv": "fe4ef7874b2020fa52eb456b4d9e9badb9174edcb380f3cc444096377d308232",
+    "profiles/dense_first_adjoint_clean_v1.log": "815fd0151c3686733d1a764a7abeadce46071d0a98dfabf4ab748a872fc29715",
+    "profiles/dense_first_adjoint_clean_v1.ncu-rep": "5c4d5b8664f59724db86da550f914ae5f4f10aa6bf3494abd4cb0015b2c52bd0",
+    "profiles/dense_memory_clean_v1.csv": "b0ec58e021398c26b1f19f262b6b6c551dd3e3823f1c394c819bd3bf347d846e",
+    "profiles/dense_memory_clean_v1.log": "02d309a8afc3861b535511565b93868cfa6bdcac82b265ea5aaad34650d2db89",
+    "profiles/dense_memory_clean_v1.ncu-rep": "88d5d6e36ccc5f78e599693156e577e3f6d78d1a06f5511940a602a820f039e6",
+    "profiles/dense_memory_clean_v1.txt": "96544bfe5be45cdf9110d27d2a0e34dad39dce87d47e1765d4b3a415a4f21a82",
+    "profiles/dense_source_counters_clean_v1.csv": "5cc7de6ca39a3bf8a27a2a351c7d6266a9b84bae07e44be3248fb277fdae7cf3",
+    "profiles/dense_source_counters_clean_v1.log": "34e8e4efcd34e3a78fbba68ef2678c5ab6095c8ddb55705ce22965baef67a363",
+    "profiles/dense_source_counters_clean_v1.ncu-rep": "720b416ea43810e71eb3fa6bcabfb76af4f9de7c982a193c4806599f20a4ee07",
+    "profiles/sparse_first_adjoint_clean_v1.csv": "15bae6d496e8efdfa1e134b755dbf28cb4f9c4c907bc6c988d3a6207ef1116f1",
+    "profiles/sparse_first_adjoint_clean_v1.log": "b7b2514cc2792b797018fc3bd7403930b4a1227f9e30a5b7bd209f300f34990d",
+    "profiles/sparse_first_adjoint_clean_v1.ncu-rep": "124de0b19bb60360a8ff33f4b52c884fa35509f33646fe0e0eabb458c56baa95",
+    "profiles/sparse_memory_clean_v1.csv": "fc0e1d0a5db00abfa47b3c6f8b78c342ff1377aea5c73ec214a9d3293cfbc828",
+    "profiles/sparse_memory_clean_v1.log": "966362b4aa7ddf43ceda031afb25425ee17ea21ff1709d41682b148bfbb0ff49",
+    "profiles/sparse_memory_clean_v1.ncu-rep": "a9e75b89c72459b8e0e8947a053872da407e2a514afdba6a5cf8991be1cf3e7a",
+    "profiles/sparse_memory_clean_v1.txt": "16d71c0ee50cc0083e7e87d18f3879a8060563cbc43dded7209fa6d034c690b1",
+    "profiles/sparse_source_counters_clean_v1.csv": "67157aacaf29477c48109553598fa33e5867b53e3310596627c2927303d76225",
+    "profiles/sparse_source_counters_clean_v1.log": "8dcb3a7e6d2c73bf1d22b6ad8072cd7ca33dbf45b9e1570915f53480efeb44bd",
+    "profiles/sparse_source_counters_clean_v1.ncu-rep": "857969f4a9a1bc903150e56f3673fb0ba6cc1d4673edf0495ec6ce9f4fda2cf5",
+    "results/formal_paired_dense_fullcg6_v2/summary.json": "c85a7c5869daf59fbc442df280a2892994d259c3aaf12ebf6201b18b69c37e1a"
+  },
+  "sass_control": {
+    "barriers": 1,
+    "dense_hmma_per_kernel": 8,
+    "dynamic_shared_kib": 8,
+    "local_bytes": 0,
+    "registers_per_thread": 48,
+    "sparse_hmma_sp_per_kernel": 4,
+    "spills": 0,
+    "stack_bytes": 0
+  },
+  "sparse": {
+    "duration_us": 30.912,
+    "memory": {
+      "l1tex_hit_rate_pct": 44.41,
+      "l2_hit_rate_pct": 51.53,
+      "max_bandwidth_pct": 48.34,
+      "mem_busy_pct": 38.45,
+      "mem_pipes_busy_pct": 23.04,
+      "memory_throughput_gbytes_s": 825.86
+    },
+    "source": {
+      "inst_executed": {
+        "unit": "inst",
+        "value": "6081487"
+      },
+      "sass__inst_executed_register_spilling": {
+        "unit": "inst",
+        "value": "0"
+      },
+      "smsp__inst_executed.sum": {
+        "unit": "inst",
+        "value": "6081487.000000"
+      },
+      "smsp__inst_executed_op_branch.sum": {
+        "unit": "inst",
+        "value": "246934.000000"
+      },
+      "smsp__sass_average_branch_targets_threads_uniform.pct": {
+        "unit": "%",
+        "value": "100.000000"
+      },
+      "thread_inst_executed": {
+        "unit": "inst",
+        "value": "194607416"
+      },
+      "thread_inst_executed_true": {
+        "unit": "inst",
+        "value": "191076956"
+      }
+    }
+  }
+}

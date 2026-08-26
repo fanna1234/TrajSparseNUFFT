@@ -1,0 +1,343 @@
+{
+  "adjoint_method": 2,
+  "aggregate_rows": [
+    {
+      "cufinufft_over_production": 2.548383093643655,
+      "cufinufft_sum_us": 12526.391599999999,
+      "pair": 0,
+      "production_sum_us": 4915.42721
+    },
+    {
+      "cufinufft_over_production": 2.560984374026866,
+      "cufinufft_sum_us": 12592.212679999999,
+      "pair": 1,
+      "production_sum_us": 4916.94241
+    },
+    {
+      "cufinufft_over_production": 2.499841805990263,
+      "cufinufft_sum_us": 12292.75017,
+      "pair": 2,
+      "production_sum_us": 4917.41123
+    },
+    {
+      "cufinufft_over_production": 2.508855948794151,
+      "cufinufft_sum_us": 12337.95547,
+      "pair": 3,
+      "production_sum_us": 4917.76161
+    },
+    {
+      "cufinufft_over_production": 2.4471968751038538,
+      "cufinufft_sum_us": 12042.56973,
+      "pair": 4,
+      "production_sum_us": 4920.96482
+    },
+    {
+      "cufinufft_over_production": 2.5220368211431627,
+      "cufinufft_sum_us": 12408.078389999999,
+      "pair": 5,
+      "production_sum_us": 4919.86409
+    }
+  ],
+  "all_wins": true,
+  "baseline_binary": "repo://experiments/frozen_evidence/build_cufinufft_fixed/cufinufft_native_cg",
+  "baseline_binary_sha256": "a5026df609b369899149c7f945f90de3ed3a87b773aca22e0352b4f39c3a3bbc",
+  "case_summaries": [
+    {
+      "case": "spiral",
+      "paired_ci95_high": 2.2940780578544566,
+      "paired_ci95_low": 2.1884720464152463,
+      "paired_geomean_speedup": 2.2425918306573642,
+      "wins": 6
+    },
+    {
+      "case": "radial",
+      "paired_ci95_high": 2.765467510153325,
+      "paired_ci95_low": 2.5549227965701253,
+      "paired_geomean_speedup": 2.650353331194663,
+      "wins": 6
+    },
+    {
+      "case": "golden",
+      "paired_ci95_high": 2.7699101512186832,
+      "paired_ci95_low": 2.5606827403249004,
+      "paired_geomean_speedup": 2.6444112148605567,
+      "wins": 6
+    }
+  ],
+  "decision": "ACCEPT",
+  "experiment_id": "cufinufft_baseline",
+  "forward_method": 1,
+  "gpu_sort": 0,
+  "iters": 20,
+  "method": 2,
+  "paired_ci95_high": 2.541752252230553,
+  "paired_ci95_low": 2.483658348541531,
+  "paired_geomean_speedup": 2.514278441069968,
+  "pairs": 6,
+  "production_binary": "repo://experiments/production/build/nufft_fp16x2_cg",
+  "production_binary_sha256": "404607bcbf04bc5010e175fafda8be0c67fcdb215006b68877c69f3b29e4e112",
+  "quality_admission_field": "all_output_application_pass",
+  "quality_summary": "repo://experiments/frozen_evidence/results/cufinufft_truthfree_admission_v1.json",
+  "quality_summary_sha256": "0a48f3bf750dc830309117c2b8efac723056e5bab52c6e12add928ce302d401b",
+  "scale_rule": {
+    "kind": "fixed_truth_free",
+    "production_native_scale": 1.0,
+    "raw_scale": 512.0
+  },
+  "snapshots": [
+    {
+      "case": "spiral",
+      "foreign": [],
+      "gpu_state": "2026/08/26 03:20:12.643, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P8, 180 MHz, 405 MHz, 35, 13.90 W, 600.00 W, 1203 MiB, 97887 MiB",
+      "pair": 0,
+      "variant": "production"
+    },
+    {
+      "case": "spiral",
+      "foreign": [],
+      "gpu_state": "2026/08/26 03:20:12.927, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P8, 450 MHz, 13365 MHz, 38, 53.36 W, 600.00 W, 1203 MiB, 97887 MiB",
+      "pair": 0,
+      "variant": "cufinufft"
+    },
+    {
+      "case": "radial",
+      "foreign": [],
+      "gpu_state": "2026/08/26 03:20:13.271, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P8, 2722 MHz, 13365 MHz, 40, 77.72 W, 600.00 W, 1203 MiB, 97887 MiB",
+      "pair": 0,
+      "variant": "cufinufft"
+    },
+    {
+      "case": "radial",
+      "foreign": [],
+      "gpu_state": "2026/08/26 03:20:13.590, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P8, 2850 MHz, 13365 MHz, 41, 94.48 W, 600.00 W, 1203 MiB, 97887 MiB",
+      "pair": 0,
+      "variant": "production"
+    },
+    {
+      "case": "golden",
+      "foreign": [],
+      "gpu_state": "2026/08/26 03:20:13.880, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2850 MHz, 13365 MHz, 44, 177.39 W, 600.00 W, 1203 MiB, 97887 MiB",
+      "pair": 0,
+      "variant": "production"
+    },
+    {
+      "case": "golden",
+      "foreign": [],
+      "gpu_state": "2026/08/26 03:20:14.172, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2850 MHz, 13365 MHz, 42, 184.19 W, 600.00 W, 1203 MiB, 97887 MiB",
+      "pair": 0,
+      "variant": "cufinufft"
+    },
+    {
+      "case": "spiral",
+      "foreign": [],
+      "gpu_state": "2026/08/26 03:20:14.541, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2842 MHz, 13365 MHz, 40, 179.48 W, 600.00 W, 1203 MiB, 97887 MiB",
+      "pair": 1,
+      "variant": "cufinufft"
+    },
+    {
+      "case": "spiral",
+      "foreign": [],
+      "gpu_state": "2026/08/26 03:20:14.852, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2850 MHz, 13365 MHz, 40, 170.62 W, 600.00 W, 1203 MiB, 97887 MiB",
+      "pair": 1,
+      "variant": "production"
+    },
+    {
+      "case": "radial",
+      "foreign": [],
+      "gpu_state": "2026/08/26 03:20:15.145, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2850 MHz, 13365 MHz, 41, 183.76 W, 600.00 W, 1203 MiB, 97887 MiB",
+      "pair": 1,
+      "variant": "production"
+    },
+    {
+      "case": "radial",
+      "foreign": [],
+      "gpu_state": "2026/08/26 03:20:15.437, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2850 MHz, 13365 MHz, 41, 183.50 W, 600.00 W, 1203 MiB, 97887 MiB",
+      "pair": 1,
+      "variant": "cufinufft"
+    },
+    {
+      "case": "golden",
+      "foreign": [],
+      "gpu_state": "2026/08/26 03:20:15.808, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2842 MHz, 13365 MHz, 40, 176.34 W, 600.00 W, 1203 MiB, 97887 MiB",
+      "pair": 1,
+      "variant": "cufinufft"
+    },
+    {
+      "case": "golden",
+      "foreign": [],
+      "gpu_state": "2026/08/26 03:20:16.160, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2850 MHz, 13365 MHz, 40, 167.13 W, 600.00 W, 1203 MiB, 97887 MiB",
+      "pair": 1,
+      "variant": "production"
+    },
+    {
+      "case": "spiral",
+      "foreign": [],
+      "gpu_state": "2026/08/26 03:20:16.450, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2842 MHz, 13365 MHz, 41, 167.73 W, 600.00 W, 1203 MiB, 97887 MiB",
+      "pair": 2,
+      "variant": "production"
+    },
+    {
+      "case": "spiral",
+      "foreign": [],
+      "gpu_state": "2026/08/26 03:20:16.739, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2842 MHz, 13365 MHz, 41, 174.13 W, 600.00 W, 1203 MiB, 97887 MiB",
+      "pair": 2,
+      "variant": "cufinufft"
+    },
+    {
+      "case": "radial",
+      "foreign": [],
+      "gpu_state": "2026/08/26 03:20:17.092, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2850 MHz, 13365 MHz, 43, 182.87 W, 600.00 W, 1203 MiB, 97887 MiB",
+      "pair": 2,
+      "variant": "cufinufft"
+    },
+    {
+      "case": "radial",
+      "foreign": [],
+      "gpu_state": "2026/08/26 03:20:17.411, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2850 MHz, 13365 MHz, 40, 170.13 W, 600.00 W, 1203 MiB, 97887 MiB",
+      "pair": 2,
+      "variant": "production"
+    },
+    {
+      "case": "golden",
+      "foreign": [],
+      "gpu_state": "2026/08/26 03:20:17.702, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2842 MHz, 13365 MHz, 44, 186.70 W, 600.00 W, 1203 MiB, 97887 MiB",
+      "pair": 2,
+      "variant": "production"
+    },
+    {
+      "case": "golden",
+      "foreign": [],
+      "gpu_state": "2026/08/26 03:20:17.994, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2842 MHz, 13365 MHz, 45, 188.54 W, 600.00 W, 1203 MiB, 97887 MiB",
+      "pair": 2,
+      "variant": "cufinufft"
+    },
+    {
+      "case": "spiral",
+      "foreign": [],
+      "gpu_state": "2026/08/26 03:20:18.352, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2850 MHz, 13365 MHz, 41, 181.14 W, 600.00 W, 1203 MiB, 97887 MiB",
+      "pair": 3,
+      "variant": "cufinufft"
+    },
+    {
+      "case": "spiral",
+      "foreign": [],
+      "gpu_state": "2026/08/26 03:20:18.694, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2850 MHz, 13365 MHz, 43, 182.64 W, 600.00 W, 1203 MiB, 97887 MiB",
+      "pair": 3,
+      "variant": "production"
+    },
+    {
+      "case": "radial",
+      "foreign": [],
+      "gpu_state": "2026/08/26 03:20:18.962, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2842 MHz, 13365 MHz, 42, 171.25 W, 600.00 W, 1203 MiB, 97887 MiB",
+      "pair": 3,
+      "variant": "production"
+    },
+    {
+      "case": "radial",
+      "foreign": [],
+      "gpu_state": "2026/08/26 03:20:19.253, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2842 MHz, 13365 MHz, 42, 183.37 W, 600.00 W, 1203 MiB, 97887 MiB",
+      "pair": 3,
+      "variant": "cufinufft"
+    },
+    {
+      "case": "golden",
+      "foreign": [],
+      "gpu_state": "2026/08/26 03:20:19.611, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2850 MHz, 13365 MHz, 40, 173.39 W, 600.00 W, 1203 MiB, 97887 MiB",
+      "pair": 3,
+      "variant": "cufinufft"
+    },
+    {
+      "case": "golden",
+      "foreign": [],
+      "gpu_state": "2026/08/26 03:20:19.970, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2850 MHz, 13365 MHz, 42, 167.38 W, 600.00 W, 1203 MiB, 97887 MiB",
+      "pair": 3,
+      "variant": "production"
+    },
+    {
+      "case": "spiral",
+      "foreign": [],
+      "gpu_state": "2026/08/26 03:20:20.261, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2842 MHz, 13365 MHz, 43, 180.67 W, 600.00 W, 1203 MiB, 97887 MiB",
+      "pair": 4,
+      "variant": "production"
+    },
+    {
+      "case": "spiral",
+      "foreign": [],
+      "gpu_state": "2026/08/26 03:20:20.550, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2850 MHz, 13365 MHz, 42, 181.32 W, 600.00 W, 1203 MiB, 97887 MiB",
+      "pair": 4,
+      "variant": "cufinufft"
+    },
+    {
+      "case": "radial",
+      "foreign": [],
+      "gpu_state": "2026/08/26 03:20:20.856, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2850 MHz, 13365 MHz, 42, 183.44 W, 600.00 W, 1203 MiB, 97887 MiB",
+      "pair": 4,
+      "variant": "cufinufft"
+    },
+    {
+      "case": "radial",
+      "foreign": [],
+      "gpu_state": "2026/08/26 03:20:21.214, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2850 MHz, 13365 MHz, 41, 169.94 W, 600.00 W, 1203 MiB, 97887 MiB",
+      "pair": 4,
+      "variant": "production"
+    },
+    {
+      "case": "golden",
+      "foreign": [],
+      "gpu_state": "2026/08/26 03:20:21.475, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2842 MHz, 13365 MHz, 45, 183.70 W, 600.00 W, 1203 MiB, 97887 MiB",
+      "pair": 4,
+      "variant": "production"
+    },
+    {
+      "case": "golden",
+      "foreign": [],
+      "gpu_state": "2026/08/26 03:20:21.767, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2842 MHz, 13365 MHz, 43, 183.18 W, 600.00 W, 1203 MiB, 97887 MiB",
+      "pair": 4,
+      "variant": "cufinufft"
+    },
+    {
+      "case": "spiral",
+      "foreign": [],
+      "gpu_state": "2026/08/26 03:20:22.119, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2850 MHz, 13365 MHz, 41, 181.01 W, 600.00 W, 1203 MiB, 97887 MiB",
+      "pair": 5,
+      "variant": "cufinufft"
+    },
+    {
+      "case": "spiral",
+      "foreign": [],
+      "gpu_state": "2026/08/26 03:20:22.458, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2850 MHz, 13365 MHz, 42, 169.39 W, 600.00 W, 1203 MiB, 97887 MiB",
+      "pair": 5,
+      "variant": "production"
+    },
+    {
+      "case": "radial",
+      "foreign": [],
+      "gpu_state": "2026/08/26 03:20:22.752, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2842 MHz, 13365 MHz, 43, 170.02 W, 600.00 W, 1203 MiB, 97887 MiB",
+      "pair": 5,
+      "variant": "production"
+    },
+    {
+      "case": "radial",
+      "foreign": [],
+      "gpu_state": "2026/08/26 03:20:23.042, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2842 MHz, 13365 MHz, 42, 177.96 W, 600.00 W, 1203 MiB, 97887 MiB",
+      "pair": 5,
+      "variant": "cufinufft"
+    },
+    {
+      "case": "golden",
+      "foreign": [],
+      "gpu_state": "2026/08/26 03:20:23.403, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2850 MHz, 13365 MHz, 43, 182.70 W, 600.00 W, 1203 MiB, 97887 MiB",
+      "pair": 5,
+      "variant": "cufinufft"
+    },
+    {
+      "case": "golden",
+      "foreign": [],
+      "gpu_state": "2026/08/26 03:20:23.762, NVIDIA RTX PRO 6000 Blackwell Workstation Edition, GPU-REDACTED, 610.43.02, P1, 2842 MHz, 13365 MHz, 42, 167.49 W, 600.00 W, 1203 MiB, 97887 MiB",
+      "pair": 5,
+      "variant": "production"
+    }
+  ],
+  "warmup": 5,
+  "wins": 6
+}

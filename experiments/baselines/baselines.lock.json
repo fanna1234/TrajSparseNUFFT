@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "entries": [
+    {
+      "name": "finufft-cufinufft",
+      "url": "https://github.com/flatironinstitute/finufft.git",
+      "commit": "9810998d273b504de6d61896047cc691738cd94c",
+      "version": "2.6.0.dev0",
+      "license": "Apache-2.0",
+      "role": "quality-admitted native full-CG baseline"
+    },
+    {
+      "name": "torchkbnufft",
+      "url": "https://github.com/mmuckley/torchkbnufft.git",
+      "version": "1.5.2",
+      "license": "MIT",
+      "role": "FP32 sparse numerical reference"
+    },
+    {
+      "name": "mri-nufft",
+      "url": "https://github.com/mind-inria/mri-nufft.git",
+      "commit": "4b43e5f4c010eec2c79b4765f23fd10ff3a1689c",
+      "license": "BSD-3-Clause",
+      "role": "coordinate and backend convention adapter"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "cufinufft_quality": {
+    "output_application_passes": 36,
+    "output_count": 36,
+    "repeat_pair_count": 18,
+    "repeat_stability_passes": 16
+  },
+  "decision": "accepted",
+  "dense_quality": {
+    "all_application_pass": true,
+    "all_eager_graph_bitwise": true,
+    "rows": 9
+  },
+  "hardening": {
+    "all_memcheck_pass": true,
+    "all_stress_pass": true,
+    "cufinufft_runtime_contains_truth": false
+  },
+  "long_cg": {
+    "endpoint_pass": true,
+    "iterations": 50,
+    "magnitude_nrmse": 0.0003333871718496084,
+    "minimum_denominator": 0.0008302401984110475,
+    "ssim": 0.9999994569635391
+  },
+  "performance": {
+    "cufinufft": {
+      "ci95_high": 2.541752252230553,
+      "ci95_low": 2.483658348541531,
+      "pairs": 6,
+      "speedup": 2.514278441069968,
+      "wins": 6
+    },
+    "dense_eager": {
+      "ci95_high": 1.4086164184770962,
+      "ci95_low": 1.4077432604035658,
+      "speedup": 1.4082191001195759,
+      "wins": 6
+    },
+    "dense_graph": {
+      "ci95_high": 1.4139917564297222,
+      "ci95_low": 1.4135029798543173,
+      "speedup": 1.4137558002480994,
+      "wins": 6
+    }
+  },
+  "quality": {
+    "all_eager_graph_bitwise": true,
+    "application_passes": 27,
+    "minimum_psnr_db": 72.31644280704435,
+    "minimum_ssim": 0.9999627647838593,
+    "rows": 27,
+    "worst_magnitude_nrmse": 0.00185660261195153
+  },
+  "schema_version": 1,
+  "source_sha256": {
+    "evidence/source/cufinufft_performance.json": "8bdd67c14e871257f933dfc7f2aecec480d01692bbccadddfe12891de10c26a0",
+    "evidence/source/cufinufft_quality_1.json": "adbf251103fbd74f8036a22eb4751ded597a6f6c0d39eaa8c47d508e220a5739",
+    "evidence/source/cufinufft_quality_2.json": "db0fbe6ad2403b1d5fd06e9a1a0b7e93191ff7da647fb53acf6f40baccac0a83",
+    "evidence/source/dense_performance.json": "2d149bd8cc53886d622209c1a9eb28f8c4203a6f44dea4a424e20a08a45e7ceb",
+    "evidence/source/dense_quality.json": "866dbe1f489a2200b55d269ef1b9e046a3a445dbc98ae0ff038682d29fc80c39",
+    "evidence/source/development_quality.json": "70187f5a8d39db7f534a5750ca79f3e2b7e8ed7211f8cb094b1d7d238dfc1e03",
+    "evidence/source/hardening.json": "783d2988ba404ba06ee4cc0250dcec3700294709e74762c483e9deb4914225f5",
+    "evidence/source/heldout_quality.json": "3d54de67c07d40321a10b00272b8ab156594817875883ccfc4f82a0818419884",
+    "evidence/source/long_cg.json": "47998626acb7082cea919e2fd3fc6fa24424df9fdb7c0d041de2e88a9d1f30d0",
+    "evidence/source/scale_latency.json": "a0761ddf42c90354705abe2287cdac65c93e4d6adcaf45bc1de03a3ba4f7c104"
+  }
+}

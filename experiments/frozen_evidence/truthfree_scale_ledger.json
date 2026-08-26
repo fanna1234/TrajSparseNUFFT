@@ -1,0 +1,29 @@
+{
+  "contract": {
+    "derivation": "raw_scale equals the frozen Cartesian grid width",
+    "grid_width": 512,
+    "native_scale": 1.0,
+    "raw_scale": 512.0,
+    "truth_free": true
+  },
+  "rows": [
+    {"acquisition": "fs0005", "frame": 0, "native_scale": 1.0, "raw_scale": 512.0, "trajectory": "spiral"},
+    {"acquisition": "fs0005", "frame": 1, "native_scale": 1.0, "raw_scale": 512.0, "trajectory": "spiral"},
+    {"acquisition": "fs0005", "frame": 2, "native_scale": 1.0, "raw_scale": 512.0, "trajectory": "spiral"},
+    {"acquisition": "fs0005", "frame": 0, "native_scale": 1.0, "raw_scale": 512.0, "trajectory": "radial"},
+    {"acquisition": "fs0005", "frame": 1, "native_scale": 1.0, "raw_scale": 512.0, "trajectory": "radial"},
+    {"acquisition": "fs0005", "frame": 2, "native_scale": 1.0, "raw_scale": 512.0, "trajectory": "radial"},
+    {"acquisition": "fs0005", "frame": 0, "native_scale": 1.0, "raw_scale": 512.0, "trajectory": "golden"},
+    {"acquisition": "fs0005", "frame": 1, "native_scale": 1.0, "raw_scale": 512.0, "trajectory": "golden"},
+    {"acquisition": "fs0005", "frame": 2, "native_scale": 1.0, "raw_scale": 512.0, "trajectory": "golden"},
+    {"acquisition": "fs0016", "frame": 0, "native_scale": 1.0, "raw_scale": 512.0, "trajectory": "spiral"},
+    {"acquisition": "fs0016", "frame": 1, "native_scale": 1.0, "raw_scale": 512.0, "trajectory": "spiral"},
+    {"acquisition": "fs0016", "frame": 2, "native_scale": 1.0, "raw_scale": 512.0, "trajectory": "spiral"},
+    {"acquisition": "fs0016", "frame": 0, "native_scale": 1.0, "raw_scale": 512.0, "trajectory": "radial"},
+    {"acquisition": "fs0016", "frame": 1, "native_scale": 1.0, "raw_scale": 512.0, "trajectory": "radial"},
+    {"acquisition": "fs0016", "frame": 2, "native_scale": 1.0, "raw_scale": 512.0, "trajectory": "radial"},
+    {"acquisition": "fs0016", "frame": 0, "native_scale": 1.0, "raw_scale": 512.0, "trajectory": "golden"},
+    {"acquisition": "fs0016", "frame": 1, "native_scale": 1.0, "raw_scale": 512.0, "trajectory": "golden"},
+    {"acquisition": "fs0016", "frame": 2, "native_scale": 1.0, "raw_scale": 512.0, "trajectory": "golden"}
+  ]
+}
