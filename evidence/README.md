@@ -15,3 +15,8 @@ required by the verifier.
 Large MRI arrays, compiled binaries, profiler databases, and raw sanitizer
 logs are intentionally excluded. Fresh runs regenerate those artifacts under
 `reproduced-data/` and `reproduced-results/`.
+
+`reproduction_20260914.json` is a separate standalone-reproduction check. It
+records fresh quality and paired-performance results, the repaired preparation
+boundary, and hashes of locally retained source summaries. It is not an input
+to `frozen_results.json` and does not replace the original benchmark record.

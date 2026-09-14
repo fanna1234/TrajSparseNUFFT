@@ -3,10 +3,11 @@ set -euo pipefail
 
 experiment_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 repo_root=$(cd "${experiment_dir}/../.." && pwd)
+source "${repo_root}/tools/runtime_env.sh"
 results_root=${TRAJSPARSE_RESULTS_ROOT:-"${repo_root}/reproduced-results"}
 output=${1:-"${results_root}/hardening"}
-if [[ -e "${output}/summary.json" ]]; then
-  echo "refusing to overwrite ${output}/summary.json" >&2
+if [[ -d "${output}" && -n "$(find "${output}" -mindepth 1 -print -quit)" ]]; then
+  echo "refusing to overwrite nonempty ${output}" >&2
   exit 2
 fi
 mkdir -p "${output}"
@@ -104,7 +105,7 @@ sha256sum \
   "${repo_root}/experiments/cufinufft_baseline/cufinufft_native_cg.cu" \
   > "${output}/sha256sums.txt"
 
-python3 - "${output}" <<'PY'
+"${TRAJSPARSE_GPU_PYTHON:-python3}" - "${output}" <<'PY'
 import hashlib
 import json
 import sys

@@ -1,0 +1,8 @@
+# Install the official PyTorch cu129 wheel first; see docs/REPRODUCE.md.
+# These are the measured direct dependencies, not a complete transitive lock.
+numpy==2.2.6
+torch==2.8.0+cu129
+torchkbnufft==1.5.2
+h5py==3.16.0
+ismrmrd==1.15.0
+scikit-image==0.26.0

@@ -5,6 +5,8 @@ from __future__ import annotations
 
 import argparse
 import json
+import itertools
+import math
 from pathlib import Path
 
 
@@ -14,6 +16,22 @@ def main() -> None:
     parser.add_argument("--output", type=Path)
     args = parser.parse_args()
     summary = json.loads(args.summary.read_text(encoding="utf-8"))
+    rows = summary["rows"]
+    expected = set(itertools.product(("spiral", "radial", "golden"), range(3)))
+    if len(rows) != 9 or {(r["trajectory"], r["frame"]) for r in rows} != expected:
+        raise RuntimeError("cuFINUFFT quality has missing or duplicate logical rows")
+    for row in rows:
+        replicas = row["replica_quality"]
+        if len(replicas) != 2 or not all(
+            q["application_vs_fp32_pass"] is True and q["finite"] is True
+            for q in replicas
+        ):
+            raise RuntimeError("cuFINUFFT replica quality is incomplete or failed")
+        if not math.isfinite(float(row["repeat_reconstruction_complex_rel_l2"])):
+            raise RuntimeError("cuFINUFFT repeat diagnostic is nonfinite")
+    if (summary["forward_method"], summary["adjoint_method"], summary["gpu_sort"],
+        summary["scale_rule"]["raw_scale"]) != (1, 2, 0, 512):
+        raise RuntimeError("cuFINUFFT configuration differs from the frozen contract")
     checks = {
         "logical rows": summary["row_count"] == 9,
         "replica rows": summary["replica_row_count"] == 18,

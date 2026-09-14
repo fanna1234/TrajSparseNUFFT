@@ -2,6 +2,7 @@
 set -euo pipefail
 
 repo_root=$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)
+source "${repo_root}/tools/runtime_env.sh"
 output_root=${1:-"${TRAJSPARSE_DATA_ROOT:-${repo_root}/data/ocmr}"}
 mkdir -p "${output_root}"
 

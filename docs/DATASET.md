@@ -22,6 +22,14 @@ one frozen covariance eigenbasis per acquisition.
 
 ## Retrospective trajectory boundary
 
+The fixed spiral trajectory is versioned to preserve the evaluated sample
+locations. Its SHA-256 checksums are:
+
+```text
+fe1955cbcd0e343b7724357a833ea83b6d47e3ffbc749ac3208393a879483eba  spiral_standard_256.npy
+faa3f82b6f55ea26bb562ea2ebd501047db0bb184ac55ca8db37db11070a97e  spiral_standard_256.f32xy.bin
+```
+
 The OCMR acquisition is Cartesian. Spiral, radial, and golden-angle
 measurements are generated retrospectively from the common real image and coil
 maps. They must not be described as prospectively acquired non-Cartesian OCMR

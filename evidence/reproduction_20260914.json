@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-14",
+  "role": "standalone repository reproduction check; not a replacement for frozen_results.json",
+  "base_revision": "26ac3f80325b8c1ddd551140db14e02717888de8",
+  "cuda_sources_unchanged": true,
+  "environment": {
+    "gpu": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition",
+    "architecture": "sm_120a",
+    "cuda": "13.2.51",
+    "driver": "610.43.02",
+    "python": "3.13.9"
+  },
+  "scope": {
+    "preparation": "all three OCMR acquisitions and all packs regenerated from hash-verified cached source objects",
+    "measurement_scale": 1,
+    "raw_operator_scale": 512,
+    "native_operator_scale": 1,
+    "cg_steps": 10,
+    "timing": "complete device-resident reconstruction",
+    "excluded_from_timing": [
+      "transfers",
+      "packing",
+      "setup",
+      "baseline planning"
+    ],
+    "process_pairs": 6,
+    "warmups": 5,
+    "timed_iterations": 20
+  },
+  "cpu_tests_passed": 21,
+  "quality": {
+    "rows": 27,
+    "all_pass": true,
+    "eager_graph_bitwise": true,
+    "worst_magnitude_nrmse": 0.00185660261195153,
+    "minimum_ssim": 0.9999627647838593
+  },
+  "baseline_quality": {
+    "output_count": 18,
+    "output_application_passes": 18,
+    "repeat_pair_count": 9,
+    "repeat_stability_passes_at_2e3": 8
+  },
+  "external": {
+    "paired_geomean_speedup": 2.5442932947117685,
+    "paired_ci95_low": 2.4847847400190073,
+    "paired_ci95_high": 2.625429867474434,
+    "pairs": 6,
+    "wins": 6,
+    "production_binary_sha256": "e4f25c343a7baa23f471459b08b41929757f4c341366c443414bb426eb385924",
+    "baseline_binary_sha256": "3a556a1d44a3112ac516e0ffe783d5b6085149ed8ee34338bf23cbdd82222190"
+  },
+  "dense": [
+    {
+      "mode": "eager",
+      "paired_geomean_speedup": 1.402791428208656,
+      "paired_ci95_low": 1.4025506953667042,
+      "paired_ci95_high": 1.4030650829780924,
+      "wins": 6
+    },
+    {
+      "mode": "graph",
+      "paired_geomean_speedup": 1.4046997924981215,
+      "paired_ci95_low": 1.4043506808323916,
+      "paired_ci95_high": 1.4049709573914777,
+      "wins": 6
+    }
+  ],
+  "source_summary_sha256": {
+    "fresh-development.json": "a327ef6193129380904c0fcb962db4698ef513cfc8bfc4516e367b479bf85241",
+    "fresh-heldout.json": "ff266a56f13d5084e22de3c61c26a3d77abb449f4c515446abe3dca4df3cc05b",
+    "fresh-baseline-admission.json": "8f6af6035025cbeb063d026a15982fad3b5789102a5a2859716922e30a0256a4",
+    "fresh-main-performance.json": "69c14cc68f3a0117cc033efe39c94321afeab5672a129dfe42a5aba9751f4411",
+    "fresh-design-evidence.json": "8a9a6159936de16138eb61809b4ec4681693e10f003cb8a934b81b4908038c7c"
+  },
+  "retained_failure": {
+    "component": "previous preparation wrapper",
+    "cause": "measurement export multiplied observations by the operator scale 512",
+    "effect": "FP16 overflow and nonfinite CG output",
+    "fix": "leave measurements unscaled; keep operator normalization unchanged",
+    "status": "fixed and covered by a regression test"
+  },
+  "not_rerun": [
+    "sanitizer stress campaign",
+    "long-CG sweep"
+  ]
+}

@@ -7,6 +7,8 @@ import argparse
 import json
 from pathlib import Path
 
+from quality_contract import validate_rows
+
 
 def main() -> None:
     parser = argparse.ArgumentParser()
@@ -15,6 +17,8 @@ def main() -> None:
     args = parser.parse_args()
     development = json.loads(args.development.read_text(encoding="utf-8"))
     heldout = json.loads(args.heldout.read_text(encoding="utf-8"))
+    validate_rows(development["rows"])
+    validate_rows(heldout["rows"], ("fs0005", "fs0016"))
 
     checks = {
         "development rows": len(development["rows"]) == 9,

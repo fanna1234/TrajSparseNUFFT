@@ -231,7 +231,7 @@ wheels = [
 ]
 
 [[package]]
-name = "sparse-mma-nufft-oracle"
+name = "trajtc"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [

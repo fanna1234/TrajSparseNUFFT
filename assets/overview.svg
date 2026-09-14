@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="340" viewBox="0 0 1160 340" role="img" aria-labelledby="title desc">
+<title id="title">TrajTC: reusable geometry and per-call precision</title>
+<desc id="desc">The fixed spiral trajectory is packed offline into independent forward and adjoint 2:4 coefficient layouts. Each dynamic FP32 input is split into FP16 high and residual panels, evaluated with the same sparse pack, and accumulated in FP32.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#202124"/></marker></defs>
+<rect width="1160" height="340" rx="10" fill="white"/>
+<g font-family="Arial, Helvetica, sans-serif" fill="#111111">
+<text x="30" y="29" font-size="14" font-weight="600" text-anchor="start">OFFLINE · FIXED GEOMETRY</text>
+<polyline points="41.00,106.00 46.92,83.94 62.45,67.44 83.77,60.30 105.75,64.08 123.18,77.69 132.03,97.77 130.33,119.47 118.67,137.62 99.95,148.01 78.73,148.31 60.06,138.61 48.30,121.38 46.11,100.81 53.85,81.83 69.51,68.88 89.27,64.92 108.37,70.72 122.32,84.75 127.92,103.54 124.00,122.56 111.66,137.33 93.97,144.43 75.20,142.33 59.80,131.70 51.36,115.22 51.71,96.87 60.62,81.04 75.81,71.41 93.57,70.12 109.66,77.32 120.32,91.13 123.14,108.17 117.62,124.34 105.23,135.85 89.05,140.08 72.97,136.19 60.77,125.27 55.26,110.05 57.58,94.22 67.01,81.51 81.18,74.85 96.63,75.69 109.68,83.64 117.33,96.67 117.89,111.59 111.41,124.83 99.57,133.33 85.30,135.18 72.02,130.12 62.83,119.52 59.80,106.00 63.48,92.83 72.83,83.11 85.50,79.02 98.42,81.39 108.53,89.48 113.55,101.22 112.41,113.77 105.58,124.13 94.81,129.93 82.76,129.95 72.29,124.34 65.83,114.59 64.77,103.12 69.20,92.69 77.89,85.71 88.69,83.71 98.97,87.01 106.33,94.65 109.16,104.70 106.92,114.71 100.33,122.33 91.08,125.85 81.45,124.60 73.70,119.04 69.59,110.63 69.95,101.46 74.52,93.71 82.06,89.14 90.69,88.70 98.33,92.32 103.24,98.99 104.37,107.01 101.63,114.44 95.83,119.57 88.47,121.29 81.35,119.36 76.12,114.41 73.92,107.74 75.11,101.01 79.25,95.78 85.20,93.22 91.48,93.77 96.60,97.13 99.42,102.37 99.41,108.13 96.76,113.05 92.24,116.01 87.03,116.46 82.40,114.45 79.39,110.62 78.60,106.00 80.04,101.73 83.22,98.78 87.23,97.74 91.09,98.70 93.89,101.26 95.07,104.68 94.50,108.07 92.49,110.63 89.66,111.85 86.78,111.58 84.52,110.06 83.36,107.80 83.43,105.43 84.54,103.55 86.27,102.54 88.11,102.50 89.57,103.29 90.35,104.54 90.39,105.85 89.84,106.85 89.00,107.32 88.20,107.27 87.69,106.87 87.59,106.37 87.82,106.04 88.18,105.96 88.41,105.63 88.31,105.13 87.80,104.73 87.00,104.68 86.16,105.15 85.61,106.15 85.65,107.46 86.43,108.71 87.89,109.50 89.73,109.46 91.46,108.45 92.57,106.57 92.64,104.20 91.48,101.94 89.22,100.42 86.34,100.15 83.51,101.37 81.50,103.93 80.93,107.32 82.11,110.74 84.91,113.30 88.77,114.26 92.78,113.22 95.96,110.27 97.40,106.00 96.61,101.38 93.60,97.55 88.97,95.54 83.76,95.99 79.24,98.95 76.59,103.87 76.58,109.63 79.40,114.87 84.52,118.23 90.80,118.78 96.75,116.22 100.89,110.99 102.08,104.26 99.88,97.59 94.65,92.64 87.53,90.71 80.17,92.43 74.37,97.56 71.63,104.99 72.76,113.01 77.67,119.68 85.31,123.30 93.94,122.86 101.48,118.29 106.05,110.54 106.41,101.37 102.30,92.96 94.55,87.40 84.92,86.15 75.67,89.67 69.08,97.29 66.84,107.30 69.67,117.35 77.03,124.99 87.31,128.29 98.11,126.29 106.80,119.31 111.23,108.88 110.17,97.41 103.71,87.66 93.24,82.05 81.19,82.07 70.42,87.87 63.59,98.23 62.45,110.78 67.47,122.52 77.58,130.61 90.50,132.98 103.17,128.89 112.52,119.17 116.20,106.00 113.17,92.48 103.98,81.88 90.70,76.82 76.43,78.67 64.59,87.17 58.11,100.41 58.67,115.33 66.32,128.36 79.37,136.31 94.82,137.15 108.99,130.49 118.42,117.78 120.74,101.95 115.23,86.73 103.03,75.81 86.95,71.92 70.77,76.15 58.38,87.66 52.86,103.83 55.68,120.87 66.34,134.68 82.43,141.88 100.19,140.59 115.38,130.96 124.29,115.13 124.64,96.78 116.20,80.30 100.80,69.67 82.03,67.57 64.34,74.67 52.00,89.44 48.08,108.46 53.68,127.25 67.63,141.28 86.73,147.08 106.49,143.12 122.15,130.17 129.89,111.19 127.70,90.62 115.94,73.39 97.27,63.69 76.05,63.99 57.33,74.38 45.67,92.53 43.97,114.23 52.82,134.31 70.25,147.92 92.23,151.70 113.55,144.56 129.08,128.06 135.00,106.00" fill="none" stroke="#6e94b3" stroke-width="1.1"/>
+<text x="192" y="97" font-size="20" font-weight="400" text-anchor="middle">Fixed</text>
+<text x="192" y="122" font-size="20" font-weight="400" text-anchor="middle">trajectory</text>
+<text x="88" y="162" font-size="13" font-weight="400" text-anchor="middle">One interleaf</text>
+<path d="M257 106 L308 106" fill="none" stroke="#202124" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="331" y="60" width="270" height="90" rx="6" fill="#f3f5f7"/>
+<text x="466" y="96" font-size="21" font-weight="600" text-anchor="middle">Pack coefficients</text>
+<text x="466" y="124" font-size="17" font-weight="400" text-anchor="middle">Reorder + legal layers</text>
+<path d="M622 106 L672 106" fill="none" stroke="#202124" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="695" y="60" width="422" height="90" rx="6" fill="#e8f0f7"/>
+<text x="906" y="96" font-size="21" font-weight="600" text-anchor="middle">Reusable 2:4 coefficient packs</text>
+<text x="906" y="124" font-size="17" font-weight="400" text-anchor="middle">Forward / adjoint coefficients and maps</text>
+<path d="M30 173 H1130" stroke="#b7bec5" stroke-dasharray="5 5" fill="none"/>
+<text x="30" y="201" font-size="14" font-weight="600" text-anchor="start">PER CALL · CHANGING INPUTS</text>
+<path d="M755 151 L755 223" fill="none" stroke="#202124" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="30" y="228" width="213" height="75" rx="6" fill="#f3f5f7"/>
+<text x="136.5" y="260" font-size="21" font-weight="600" text-anchor="middle">FP32 input panel</text>
+<text x="136.5" y="286" font-size="16" font-weight="400" text-anchor="middle">FFT or sample endpoint</text>
+<path d="M253 266 L294 266" fill="none" stroke="#202124" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="308" y="228" width="106" height="75" rx="6" fill="#dceaf5"/>
+<rect x="424" y="228" width="120" height="75" rx="6" fill="#edf2f6"/>
+<text x="361" y="259" font-size="21" font-weight="600" text-anchor="middle">High</text>
+<text x="361" y="286" font-size="17" font-weight="400" text-anchor="middle">FP16</text>
+<text x="484" y="259" font-size="21" font-weight="600" text-anchor="middle">Residual</text>
+<text x="484" y="286" font-size="17" font-weight="400" text-anchor="middle">FP16</text>
+<path d="M557 266 L600 266" fill="none" stroke="#202124" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="614" y="228" width="276" height="75" rx="6" fill="#e8f0f7"/>
+<text x="752" y="260" font-size="20" font-weight="600" text-anchor="middle">Sparse complex products</text>
+<text x="752" y="286" font-size="17" font-weight="400" text-anchor="middle">High + residual passes</text>
+<path d="M904 266 L944 266" fill="none" stroke="#202124" stroke-width="1.6" marker-end="url(#arrow)"/>
+<rect x="958" y="228" width="159" height="75" rx="6" fill="#f3f5f7"/>
+<text x="1037.5" y="260" font-size="20" font-weight="600" text-anchor="middle">FP32 output</text>
+<text x="1037.5" y="286" font-size="16" font-weight="400" text-anchor="middle">Solver continues</text>
+<text x="30" y="330" font-size="15" font-weight="400" text-anchor="start">Interpolation dataflow; FFT, SENSE and CG remain GPU-resident.</text>
+</g>
+</svg>

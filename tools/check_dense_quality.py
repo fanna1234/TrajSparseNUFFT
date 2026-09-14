@@ -7,12 +7,15 @@ import argparse
 import json
 from pathlib import Path
 
+from quality_contract import validate_rows
+
 
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("summary", type=Path)
     args = parser.parse_args()
     summary = json.loads(args.summary.read_text(encoding="utf-8"))
+    validate_rows(summary["rows"])
     checks = {
         "rows": len(summary["rows"]) == 9,
         "application quality": summary["all_application_pass"],

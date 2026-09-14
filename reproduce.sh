@@ -3,6 +3,8 @@ set -euo pipefail
 
 repo_root=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 cd "${repo_root}"
+source "${repo_root}/tools/runtime_env.sh"
+gpu_python=${TRAJSPARSE_GPU_PYTHON:-python3}
 group=${1:-help}
 if [[ $# -gt 0 ]]; then
   shift
@@ -50,11 +52,16 @@ build_baseline() {
 }
 
 case "${group}" in
+  doctor)
+    run bash -c 'source "$1/tools/cuda_env.sh"; resolve_cuda_toolchain' _ "${repo_root}"
+    run "${gpu_python}" "${repo_root}/tools/check_gpu_environment.py"
+    ;;
+
   smoke)
-    command -v uv >/dev/null 2>&1 || {
+    if [[ ${dry_run} -eq 0 ]] && ! command -v uv >/dev/null 2>&1; then
       echo "uv is required for the CPU smoke test" >&2
       exit 2
-    }
+    fi
     run uv run --project "${repo_root}" --frozen \
       python -m unittest discover -s "${repo_root}/tests" -v
     ;;
@@ -92,7 +99,7 @@ case "${group}" in
     development_case=$(required_value TRAJSPARSE_DEVELOPMENT_CASE)
     development_runtime=$(required_value TRAJSPARSE_DEVELOPMENT_RUNTIME_ROOT)
     build_baseline
-    run python3 "${baseline_dir}/run_quality_matrix.py" \
+    run "${gpu_python}" "${baseline_dir}/run_quality_matrix.py" \
       --repo-root "${repo_root}" \
       --binary "${baseline_dir}/build/cufinufft_native_cg" \
       --runtime-root "${development_runtime}" \
@@ -100,7 +107,7 @@ case "${group}" in
       --forward-method 1 --adjoint-method 2 --gpu-sort 0 \
       --raw-scale 512 \
       --output "${results_root}/baseline-quality"
-    run python3 "${repo_root}/tools/check_baseline_quality.py" \
+    run "${gpu_python}" "${repo_root}/tools/check_baseline_quality.py" \
       "${results_root}/baseline-quality/summary.json" \
       --output "${results_root}/baseline-quality/admission.json"
     ;;
@@ -112,7 +119,7 @@ case "${group}" in
     heldout_runtime=$(required_value TRAJSPARSE_HELDOUT_RUNTIME_ROOT)
     packed_root=$(required_value TRAJSPARSE_PACKED_ROOT)
     run bash "${production_dir}/build.sh"
-    run python3 "${production_dir}/run_cg_quality_matrix.py" \
+    run "${gpu_python}" "${production_dir}/run_cg_quality_matrix.py" \
       --repo-root "${repo_root}" \
       --binary "${production_dir}/build/nufft_fp16x2_cg" \
       --runtime-root "${development_runtime}" \
@@ -120,7 +127,7 @@ case "${group}" in
       --case "${development_case}" \
       --raw-scale 512 \
       --output "${results_root}/quality/development"
-    run python3 "${heldout_dir}/run_heldout_quality.py" \
+    run "${gpu_python}" "${heldout_dir}/run_heldout_quality.py" \
       --repo-root "${repo_root}" \
       --binary "${production_dir}/build/nufft_fp16x2_cg" \
       --runtime-root "${heldout_runtime}" \
@@ -128,7 +135,7 @@ case "${group}" in
       --cases-root "${heldout_cases}" \
       --raw-scale 512 \
       --output "${results_root}/quality/heldout"
-    run python3 "${repo_root}/tools/check_reproduced_quality.py" \
+    run "${gpu_python}" "${repo_root}/tools/check_reproduced_quality.py" \
       --development "${results_root}/quality/development/summary.json" \
       --heldout "${results_root}/quality/heldout/summary.json"
     ;;
@@ -146,7 +153,7 @@ case "${group}" in
       echo "missing admitted baseline binary; run baseline-quality first" >&2
       exit 2
     fi
-    run python3 "${baseline_dir}/run_paired_fullcg.py" \
+    run "${gpu_python}" "${baseline_dir}/run_paired_fullcg.py" \
       --repo-root "${repo_root}" \
       --production-binary "${production_dir}/build/nufft_fp16x2_cg" \
       --baseline-binary "${baseline_dir}/build/cufinufft_native_cg" \
@@ -156,7 +163,7 @@ case "${group}" in
       --forward-method 1 --adjoint-method 2 --gpu-sort 0 \
       --raw-scale 512 \
       --output "${results_root}/main-performance"
-    run python3 "${repo_root}/tools/check_reproduced_performance.py" \
+    run "${gpu_python}" "${repo_root}/tools/check_reproduced_performance.py" \
       cufinufft "${results_root}/main-performance/summary.json"
     ;;
 
@@ -167,7 +174,7 @@ case "${group}" in
     dense_root=$(required_value TRAJSPARSE_DENSE_ROOT)
     run bash "${production_dir}/build.sh"
     run bash "${dense_dir}/build.sh"
-    run python3 "${dense_dir}/run_dense_quality_matrix.py" \
+    run "${gpu_python}" "${dense_dir}/run_dense_quality_matrix.py" \
       --repo-root "${repo_root}" \
       --binary "${dense_dir}/build/nufft_fp16x2_cg_dense_control" \
       --runtime-root "${runtime_root}" \
@@ -176,9 +183,9 @@ case "${group}" in
       --case "${development_case}" \
       --raw-scale 512 \
       --output "${results_root}/dense-quality"
-    run python3 "${repo_root}/tools/check_dense_quality.py" \
+    run "${gpu_python}" "${repo_root}/tools/check_dense_quality.py" \
       "${results_root}/dense-quality/summary.json"
-    run python3 "${dense_dir}/run_paired_dense_fullcg.py" \
+    run "${gpu_python}" "${dense_dir}/run_paired_dense_fullcg.py" \
       --repo-root "${repo_root}" \
       --sparse-binary "${production_dir}/build/nufft_fp16x2_cg" \
       --dense-binary "${dense_dir}/build/nufft_fp16x2_cg_dense_control" \
@@ -188,7 +195,7 @@ case "${group}" in
       --quality-summary "${results_root}/dense-quality/summary.json" \
       --raw-scale 512 \
       --output "${results_root}/design-evidence"
-    run python3 "${repo_root}/tools/check_reproduced_performance.py" \
+    run "${gpu_python}" "${repo_root}/tools/check_reproduced_performance.py" \
       dense "${results_root}/design-evidence/summary.json"
     ;;
 
@@ -209,19 +216,27 @@ case "${group}" in
     packed_root=$(required_value TRAJSPARSE_PACKED_ROOT)
     run bash "${production_dir}/build.sh"
     run bash "${repo_root}/experiments/frozen_evidence/build_telemetry.sh"
-    run python3 "${repo_root}/experiments/frozen_evidence/run_long_cg.py" \
+    run "${gpu_python}" "${repo_root}/experiments/frozen_evidence/run_long_cg.py" \
       --repo-root "${repo_root}" \
       --binary "${repo_root}/experiments/frozen_evidence/build_telemetry/nufft_fp16x2_cg_telemetry" \
       --runtime-root "${heldout_runtime}" \
       --packed-root "${packed_root}" \
       --cases-root "${heldout_cases}" \
       --output "${results_root}/long-cg"
-    run python3 "${repo_root}/tools/check_long_cg.py" \
+    run "${gpu_python}" "${repo_root}/tools/check_long_cg.py" \
       "${results_root}/long-cg/summary.json"
     ;;
 
   help|-h|--help)
-    sed -n '/^## Reproduction groups/,$p' "${repo_root}/README.md"
+    printf '%s\n' \
+      'Usage: ./reproduce.sh <group> [--dry-run]' \
+      '' \
+      'CPU:    smoke, evidence, prepare-trajectories' \
+      'Setup:  doctor, get-data, prepare-data, build, build-baseline' \
+      'Checks: quality, baseline-quality, main-performance, design-evidence' \
+      'Extra:  hardening, long-cg' \
+      '' \
+      'See docs/REPRODUCE.md for setup, data, and expected outputs.'
     ;;
 
   *)

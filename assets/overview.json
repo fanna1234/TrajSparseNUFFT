@@ -1,0 +1,7 @@
+{
+  "kind": "schematic interpolation dataflow with a real trajectory fixture",
+  "trajectory": "experiments/data_prep/trajectories/spiral_standard_256.npy",
+  "trajectory_sha256": "fe1955cbcd0e343b7724357a833ea83b6d47e3ffbc749ac3208393a879483eba",
+  "curve_sampling": "first complete interleaf, all 256 stored samples",
+  "scope": "offline coefficient packs versus per-call input precision; no timing or matrix occupancy is encoded"
+}

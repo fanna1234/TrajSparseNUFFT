@@ -32,6 +32,29 @@ def main() -> None:
             f"found {len(manifests)} frame manifests under {root}; "
             f"expected {args.expected}"
         )
+    for path in manifests:
+        cases = json.loads(path.read_text(encoding="utf-8"))
+        if len(cases) != 3 or {case["name"] for case in cases} != {
+            "spiral65", "radial65", "golden65"
+        }:
+            raise RuntimeError(f"incomplete trajectory matrix in {path}")
+        for case in cases:
+            if case["measurement_scale"] != 1:
+                raise RuntimeError(
+                    "runtime measurements must be unscaled; raw scale 512 "
+                    "belongs to operator normalization, not measurement export"
+                )
+            expected_files = {
+                "forward_coils.c64.bin", "measurement.c64.bin", "scaling.f32.bin",
+                "density.f32.bin", "sensitivity_maps.c64.bin", "truth.f32.bin", "truth.c64.bin",
+            }
+            entries = case["entries"]
+            if len(entries) != len(expected_files) or {e["file"] for e in entries} != expected_files:
+                raise RuntimeError(f"runtime manifest has missing or duplicate payloads: {path}")
+            for entry in case["entries"]:
+                payload = path.parent / case["name"] / entry["file"]
+                if payload.stat().st_size != entry["bytes"] or sha256(payload) != entry["sha256"]:
+                    raise RuntimeError(f"runtime payload fails its manifest: {payload}")
     record = {
         "schema_version": 1,
         "root": ".",
