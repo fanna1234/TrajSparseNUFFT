@@ -185,6 +185,26 @@ Existing `TRAJSPARSE_` settings and old layout files remain accepted; conflictin
 old/new values fail explicitly. `FINUFFT_ROOT`, `CUFINUFFT_BUILD`, `BUILD_JOBS`,
 `NVCC`, and `COMPUTE_SANITIZER` remain supported tool overrides.
 
+### Rename compatibility
+
+The shell entry points source `tools/runtime_env.sh` before reading `TRAJTC_`
+settings. Its 13 listed aliases accept either prefix, export both names, and
+reject unequal nonempty values with exit code 2; empty values are treated as
+unset. This is not a wildcard mapping of every prefixed variable. Direct
+invocation of `tools/check_gpu_environment.py` only provides a current-first
+fallback for `ALLOW_VERSION_DRIFT`; use `./reproduce.sh doctor` for conflict
+checking.
+
+The existing repository URL, serialized `trajsparsenufft_*` experiment IDs,
+and `/tmp/trajsparsenufft_gpu.lock` remain compatibility identifiers. All eight
+GPU drivers must share that lock path, including when old and new checkouts
+run on the same host. Changing only its spelling would split GPU exclusion.
+The `trajtc` project name does not rename the existing `src` Python imports.
+
+Frozen JSON IDs, `repo://` provenance paths, and recorded hashes describe the
+original runs. Do not relabel them or regenerate `frozen_results.json` to
+accommodate a branding change. Fresh campaign outputs remain separate.
+
 See [Validation status](VALIDATION.md) for what was actually exercised from
 the delivered source. Frozen results do not imply that every fresh-run group
 was rerun during each documentation update.

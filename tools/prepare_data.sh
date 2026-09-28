@@ -3,9 +3,9 @@ set -euo pipefail
 
 repo_root=$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)
 source "${repo_root}/tools/runtime_env.sh"
-gpu_python=${TRAJSPARSE_GPU_PYTHON:-python3}
-data_root=${TRAJSPARSE_DATA_ROOT:-"${repo_root}/data/ocmr"}
-prepared_root=${TRAJSPARSE_PREPARED_ROOT:-"${repo_root}/reproduced-data"}
+gpu_python=${TRAJTC_GPU_PYTHON:-python3}
+data_root=${TRAJTC_DATA_ROOT:-"${repo_root}/data/ocmr"}
+prepared_root=${TRAJTC_PREPARED_ROOT:-"${repo_root}/reproduced-data"}
 
 if [[ "${gpu_python}" != */* ]]; then
   gpu_python=$(command -v "${gpu_python}" || true)

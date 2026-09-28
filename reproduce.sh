@@ -4,7 +4,7 @@ set -euo pipefail
 repo_root=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 cd "${repo_root}"
 source "${repo_root}/tools/runtime_env.sh"
-gpu_python=${TRAJSPARSE_GPU_PYTHON:-python3}
+gpu_python=${TRAJTC_GPU_PYTHON:-python3}
 group=${1:-help}
 if [[ $# -gt 0 ]]; then
   shift
@@ -40,7 +40,7 @@ required_value() {
   fi
 }
 
-results_root=${TRAJSPARSE_RESULTS_ROOT:-"${repo_root}/reproduced-results"}
+results_root=${TRAJTC_RESULTS_ROOT:-"${repo_root}/reproduced-results"}
 production_dir="${repo_root}/experiments/production"
 dense_dir="${repo_root}/experiments/dense_control"
 baseline_dir="${repo_root}/experiments/cufinufft_baseline"
@@ -96,8 +96,8 @@ case "${group}" in
     ;;
 
   baseline-quality)
-    development_case=$(required_value TRAJSPARSE_DEVELOPMENT_CASE)
-    development_runtime=$(required_value TRAJSPARSE_DEVELOPMENT_RUNTIME_ROOT)
+    development_case=$(required_value TRAJTC_DEVELOPMENT_CASE)
+    development_runtime=$(required_value TRAJTC_DEVELOPMENT_RUNTIME_ROOT)
     build_baseline
     run "${gpu_python}" "${baseline_dir}/run_quality_matrix.py" \
       --repo-root "${repo_root}" \
@@ -113,11 +113,11 @@ case "${group}" in
     ;;
 
   quality)
-    development_case=$(required_value TRAJSPARSE_DEVELOPMENT_CASE)
-    development_runtime=$(required_value TRAJSPARSE_DEVELOPMENT_RUNTIME_ROOT)
-    heldout_cases=$(required_value TRAJSPARSE_HELDOUT_CASES_ROOT)
-    heldout_runtime=$(required_value TRAJSPARSE_HELDOUT_RUNTIME_ROOT)
-    packed_root=$(required_value TRAJSPARSE_PACKED_ROOT)
+    development_case=$(required_value TRAJTC_DEVELOPMENT_CASE)
+    development_runtime=$(required_value TRAJTC_DEVELOPMENT_RUNTIME_ROOT)
+    heldout_cases=$(required_value TRAJTC_HELDOUT_CASES_ROOT)
+    heldout_runtime=$(required_value TRAJTC_HELDOUT_RUNTIME_ROOT)
+    packed_root=$(required_value TRAJTC_PACKED_ROOT)
     run bash "${production_dir}/build.sh"
     run "${gpu_python}" "${production_dir}/run_cg_quality_matrix.py" \
       --repo-root "${repo_root}" \
@@ -141,9 +141,9 @@ case "${group}" in
     ;;
 
   main-performance)
-    runtime_root=$(required_value TRAJSPARSE_PERFORMANCE_RUNTIME_ROOT)
-    packed_root=$(required_value TRAJSPARSE_PACKED_ROOT)
-    quality_summary=${TRAJSPARSE_CUFINUFFT_QUALITY_SUMMARY:-"${results_root}/baseline-quality/admission.json"}
+    runtime_root=$(required_value TRAJTC_PERFORMANCE_RUNTIME_ROOT)
+    packed_root=$(required_value TRAJTC_PACKED_ROOT)
+    quality_summary=${TRAJTC_CUFINUFFT_QUALITY_SUMMARY:-"${results_root}/baseline-quality/admission.json"}
     if [[ ${dry_run} -eq 0 && ! -f "${quality_summary}" ]]; then
       echo "missing fresh cuFINUFFT quality summary; run baseline-quality first" >&2
       exit 2
@@ -168,10 +168,10 @@ case "${group}" in
     ;;
 
   design-evidence)
-    development_case=$(required_value TRAJSPARSE_DEVELOPMENT_CASE)
-    runtime_root=$(required_value TRAJSPARSE_PERFORMANCE_RUNTIME_ROOT)
-    packed_root=$(required_value TRAJSPARSE_PACKED_ROOT)
-    dense_root=$(required_value TRAJSPARSE_DENSE_ROOT)
+    development_case=$(required_value TRAJTC_DEVELOPMENT_CASE)
+    runtime_root=$(required_value TRAJTC_PERFORMANCE_RUNTIME_ROOT)
+    packed_root=$(required_value TRAJTC_PACKED_ROOT)
+    dense_root=$(required_value TRAJTC_DENSE_ROOT)
     run bash "${production_dir}/build.sh"
     run bash "${dense_dir}/build.sh"
     run "${gpu_python}" "${dense_dir}/run_dense_quality_matrix.py" \
@@ -200,9 +200,9 @@ case "${group}" in
     ;;
 
   hardening)
-    required_value TRAJSPARSE_PACKED_ROOT >/dev/null
-    required_value TRAJSPARSE_DENSE_ROOT >/dev/null
-    required_value TRAJSPARSE_HELDOUT_RUNTIME_ROOT >/dev/null
+    required_value TRAJTC_PACKED_ROOT >/dev/null
+    required_value TRAJTC_DENSE_ROOT >/dev/null
+    required_value TRAJTC_HELDOUT_RUNTIME_ROOT >/dev/null
     run bash "${production_dir}/build.sh"
     run bash "${dense_dir}/build.sh"
     build_baseline
@@ -211,9 +211,9 @@ case "${group}" in
     ;;
 
   long-cg)
-    heldout_cases=$(required_value TRAJSPARSE_HELDOUT_CASES_ROOT)
-    heldout_runtime=$(required_value TRAJSPARSE_HELDOUT_RUNTIME_ROOT)
-    packed_root=$(required_value TRAJSPARSE_PACKED_ROOT)
+    heldout_cases=$(required_value TRAJTC_HELDOUT_CASES_ROOT)
+    heldout_runtime=$(required_value TRAJTC_HELDOUT_RUNTIME_ROOT)
+    packed_root=$(required_value TRAJTC_PACKED_ROOT)
     run bash "${production_dir}/build.sh"
     run bash "${repo_root}/experiments/frozen_evidence/build_telemetry.sh"
     run "${gpu_python}" "${repo_root}/experiments/frozen_evidence/run_long_cg.py" \

@@ -1,3 +1,4 @@
+import json
 import tempfile
 import unittest
 from argparse import Namespace
@@ -33,6 +34,8 @@ class ExportGpuCaseTest(unittest.TestCase):
             header = np.fromfile(output / "header.bin", dtype=np.uint64, count=1)
             self.assertEqual(int(header[0]), MAGIC)
             self.assertTrue((output / "manifest.json").is_file())
+            manifest = json.loads((output / "manifest.json").read_text())
+            self.assertEqual(manifest["experiment_id"], "trajsparsenufft_structural_oracle")
             self.assertGreater((output / "tile_a_comp.bin").stat().st_size, 0)
             self.assertGreater((output / "reference.bin").stat().st_size, 0)
 

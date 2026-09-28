@@ -4,7 +4,7 @@ set -euo pipefail
 experiment_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 repo_root=$(cd "${experiment_dir}/../.." && pwd)
 source "${repo_root}/tools/runtime_env.sh"
-results_root=${TRAJSPARSE_RESULTS_ROOT:-"${repo_root}/reproduced-results"}
+results_root=${TRAJTC_RESULTS_ROOT:-"${repo_root}/reproduced-results"}
 output=${1:-"${results_root}/hardening"}
 if [[ -d "${output}" && -n "$(find "${output}" -mindepth 1 -print -quit)" ]]; then
   echo "refusing to overwrite nonempty ${output}" >&2
@@ -15,9 +15,9 @@ mkdir -p "${output}"
 production="${repo_root}/experiments/production/build/nufft_fp16x2_cg"
 dense="${repo_root}/experiments/dense_control/build/nufft_fp16x2_cg_dense_control"
 cufinufft="${repo_root}/experiments/cufinufft_baseline/build/cufinufft_native_cg"
-pack="${TRAJSPARSE_PACKED_ROOT:?source reproduced-data/layout.env}/golden65"
-dense_control="${TRAJSPARSE_DENSE_ROOT:?source reproduced-data/layout.env}/golden65"
-runtime="${TRAJSPARSE_HELDOUT_RUNTIME_ROOT:?source reproduced-data/layout.env}/fs0005/frame02/golden65"
+pack="${TRAJTC_PACKED_ROOT:?source reproduced-data/layout.env}/golden65"
+dense_control="${TRAJTC_DENSE_ROOT:?source reproduced-data/layout.env}/golden65"
+runtime="${TRAJTC_HELDOUT_RUNTIME_ROOT:?source reproduced-data/layout.env}/fs0005/frame02/golden65"
 trajectory="${repo_root}/experiments/data_prep/trajectories/golden_256x256.f32xy.bin"
 sanitizer=${COMPUTE_SANITIZER:-$(command -v compute-sanitizer || true)}
 if [[ -z "${sanitizer}" || ! -x "${sanitizer}" ]]; then
@@ -105,7 +105,7 @@ sha256sum \
   "${repo_root}/experiments/cufinufft_baseline/cufinufft_native_cg.cu" \
   > "${output}/sha256sums.txt"
 
-"${TRAJSPARSE_GPU_PYTHON:-python3}" - "${output}" <<'PY'
+"${TRAJTC_GPU_PYTHON:-python3}" - "${output}" <<'PY'
 import hashlib
 import json
 import sys

@@ -46,10 +46,24 @@ class ReproductionRoutingTest(unittest.TestCase):
                 self.assertEqual(self.run_group(*arguments).returncode, 2)
 
     def test_missing_data_configuration_fails_before_build(self):
-        result = self.run_group("quality")
-        self.assertEqual(result.returncode, 2)
-        self.assertIn("required environment variable", result.stderr)
-        self.assertNotIn("build.sh", result.stdout)
+        required = {
+            "quality": "DEVELOPMENT_CASE",
+            "baseline-quality": "DEVELOPMENT_CASE",
+            "main-performance": "PERFORMANCE_RUNTIME_ROOT",
+            "design-evidence": "DEVELOPMENT_CASE",
+            "hardening": "PACKED_ROOT",
+            "long-cg": "HELDOUT_CASES_ROOT",
+        }
+        for group, suffix in required.items():
+            with self.subTest(group=group):
+                result = self.run_group(group)
+                self.assertEqual(result.returncode, 2)
+                self.assertIn(f"required environment variable is unset: TRAJTC_{suffix}",
+                              result.stderr)
+                self.assertNotIn("build.sh", result.stdout)
+                preview = self.run_group(group, "--dry-run")
+                self.assertEqual(preview.returncode, 0, preview.stderr)
+                self.assertNotIn("TRAJSPARSE_", preview.stdout)
 
     def test_every_group_has_a_nonmutating_dry_run(self):
         groups = ("smoke", "evidence", "doctor", "prepare-trajectories", "get-data",
